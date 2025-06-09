@@ -1,15 +1,32 @@
+"use client";
+
 import { useTheme } from "next-themes";
 import { Sun, Moon } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useState, useEffect } from "react";
 
 const ThemeToggle = () => {
   const { theme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   const toggleTheme = () => {
-    console.log(theme);
-
     setTheme(theme === "dark" ? "light" : "dark");
   };
+
+  if (!mounted) {
+    return (
+      <div
+        className="w-10 h-10 rounded-full bg-[var(--btn-bg)] shadow-md animate-pulse flex items-center justify-center"
+        aria-hidden="true"
+      >
+        <div className="w-4 h-4 rounded-full bg-gray-400/50 dark:bg-zinc-500/50" />
+      </div>
+    );
+  }
 
   return (
     <button
