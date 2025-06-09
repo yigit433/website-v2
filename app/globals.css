@@ -1,26 +1,67 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Arka plan ve yazı */
+  --background: linear-gradient(180deg, #ffffff, #f7fbfd);
+  --foreground: #212A3E;
+
+  /* Buton (light mode) */
+  --btn-bg: #C3E4F8;
+  --btn-text: #212A3E;
+  --btn-hover-bg: #394867;
+  --btn-hover-text: #F1F6F9;
+
+  /* Diğer renkler */
+  --color-icewhite: #F1F6F9;
+  --color-babyblue: #C3E4F8;
+  --color-nightblue-light: #394867;
+  --color-nightblue-dark: #212A3E;
+  --color-grey: #9BA4B5;
+
+  /* Font */
+  --font-sans: var(--font-geist-sans, sans-serif);
+  --font-mono: var(--font-geist-mono, monospace);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+.dark {
+  --background: linear-gradient(135deg, #0a0a0a, #212A3E);
+  --foreground: #ededed;
+
+  /* Buton (dark mode) */
+  --btn-bg: #2f3b57;
+  --btn-text: #ededed;
+  --btn-hover-bg: #394867;
+  --btn-hover-text: #ffffff;
+
+  --color-icewhite: #121212;
+  --color-babyblue: #94d8f3;
+  --color-nightblue-light: #2f3b57;
+  --color-nightblue-dark: #0e1725;
+  --color-grey: #bbbbbb;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+button {
+  background-color: var(--btn-bg);
+  color: var(--btn-text);
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.6rem 1.4rem;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+button:hover {
+  background-color: var(--btn-hover-bg);
+  color: var(--btn-hover-text);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+  transition: background 0.4s ease, color 0.4s ease;
 }
