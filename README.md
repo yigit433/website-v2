@@ -13,7 +13,7 @@ Welcome to my personal portfolio website — a space where I showcase my work, p
 git clone https://github.com/yigit433/website-v2.git
 cd website-v2
 bun install
-bun dev
+bun --bun dev
 ```
 
 ✨ Make sure you have [Bun](https://bun.sh) installed:  
