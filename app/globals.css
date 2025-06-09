@@ -61,7 +61,37 @@ button:hover {
 
 body {
   background: var(--background);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed; /* (isteğe bağlı) */
   color: var(--foreground);
   font-family: var(--font-sans);
   transition: background 0.4s ease, color 0.4s ease;
+}
+
+
+@layer utilities {
+  .text-gradient-animated {
+    background-image: linear-gradient(
+      to right,
+      var(--color-babyblue),
+      #a7d8ff,
+      var(--color-nightblue-light)
+    );
+    background-size: 300% 300%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: gradient-slide 6s ease-in-out infinite;
+    text-shadow: 0 0 6px rgba(195, 228, 248, 0.6), 0 0 12px rgba(57, 72, 103, 0.3);
+  }
+}
+
+@keyframes gradient-slide {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
 }

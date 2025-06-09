@@ -10,10 +10,6 @@ const config: Config = {
     ],
     theme: {
         extend: {
-            screens: {
-                non670: { max: "670px" },
-                non910: { max: "910px" },
-            },
             colors: {
                 yigit433: {
                     icewhite: "#F1F6F9",
