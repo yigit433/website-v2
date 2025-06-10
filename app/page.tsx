@@ -1,3 +1,4 @@
+import EducationTimeline from "@/components/Home/EducationTimeline";
 import Hero from "@/components/Home/Hero";
 import { TechStackHorizontal } from "@/components/Home/TechStack";
 
@@ -6,6 +7,7 @@ export default function Home() {
     <div className="mt-4 w-full flex flex-col items-center">
       <Hero />
       <TechStackHorizontal />
+      <EducationTimeline />
     </div>
   );
 }
