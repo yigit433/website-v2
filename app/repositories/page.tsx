@@ -86,7 +86,7 @@ export default function RepositoriesPage() {
                             className={`relative p-5 rounded-xl transition duration-300 shadow-md hover:shadow-lg flex flex-col justify-between
                 ${isPortfolio ? "border-2 border-yellow-400/40" : ""}
                 ${isOldPortfolio ? "opacity-60 hover:opacity-80 border border-gray-400/30" : ""}
-                ${isArchived ? "opacity-50 hover:opacity-70 border border-red-300/30" : ""}
+                ${isArchived ? "opacity-40 hover:opacity-100 border border-red-300/30 transition-opacity duration-300" : ""}
                 bg-[color:var(--card-bg)] text-[color:var(--foreground)]`}
                         >
                             {isPortfolio && (
