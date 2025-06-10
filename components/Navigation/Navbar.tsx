@@ -2,12 +2,12 @@
 
 import { useState } from "react";
 import { usePathname, useRouter } from "next/navigation";
-import { AnimatePresence } from "framer-motion";
+// import { AnimatePresence } from "framer-motion";
 
 import Config from "../../yigit433.config";
 import DesktopMenu from "./DesktopMenu";
-import MobileMenu from "./MobileMenu";
-import ToggleButton from "./ToggleButton";
+// import MobileMenu from "./MobileMenu";
+// import ToggleButton from "./ToggleButton";
 
 const Navbar = () => {
   const [mobNavOpen, setMobNavOpen] = useState(false);
