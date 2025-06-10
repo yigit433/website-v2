@@ -51,6 +51,7 @@ export default {
     routes: [
         { name: "Home", to: "/" },
         { name: "About me", to: "/about-me" },
-        { name: "Projects", to: "/projects" }
+        { name: "Projects", to: "/projects" },
+        { name: "Repositories", to: "/repositories" }
     ]
 };
