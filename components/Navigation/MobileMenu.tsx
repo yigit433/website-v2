@@ -11,24 +11,27 @@ type Props = {
 
 const MobileMenu = ({ routes, currentPath, closeMenu, router }: Props) => (
   <motion.div
-    initial={{ height: 0, opacity: 0 }}
-    animate={{ height: "auto", opacity: 1 }}
-    exit={{ height: 0, opacity: 0 }}
-    transition={{ duration: 0.4 }}
-    className="absolute top-full left-0 w-full bg-yigit433-nightblue-dark flex flex-col items-center px-6 py-4 block mdhidden"
+    initial={{ opacity: 0, y: -20 }}
+    animate={{ opacity: 1, y: 0 }}
+    exit={{ opacity: 0, y: -20 }}
+    transition={{ duration: 0.35, ease: "easeInOut" }}
+    className="absolute top-full left-0 w-full backdrop-blur-xl bg-[var(--card-bg)]/80 border-t border-white/10 shadow-lg rounded-b-xl z-40"
   >
-    {routes.map((route, i) => (
-      <NavItem
-        key={i}
-        route={route}
-        isActive={currentPath === route.to}
-        onClick={() => {
-          closeMenu();
-          router.push(route.to);
-        }}
-        isMobile
-      />
-    ))}
+    <ul className="flex flex-col py-4 px-6 space-y-2">
+      {routes.map((route, i) => (
+        <li key={i}>
+          <NavItem
+            route={route}
+            isActive={currentPath === route.to}
+            onClick={() => {
+              closeMenu();
+              router.push(route.to);
+            }}
+            isMobile
+          />
+        </li>
+      ))}
+    </ul>
   </motion.div>
 );
 
