@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { Mail } from "lucide-react";
 
 import Config from "@/yigit433.config";
 
@@ -18,6 +19,14 @@ const techStack = [
     { name: "Prisma", icon: "/icons/prisma.svg", description: "ORM for TypeScript and SQL." },
     { name: "MongoDB", icon: "/icons/mongodb.svg", description: "NoSQL database." },
     { name: "PostgreSQL", icon: "/icons/postgresql.svg", description: "Relational SQL database." },
+    { name: "TensorFlow", icon: "/icons/tensorflow.svg", description: "Machine learning library." },
+    { name: "PyTorch", icon: "/icons/pytorch.svg", description: "Deep learning framework." },
+    { name: "Python", icon: "/icons/python.svg", description: "General-purpose programming language." },
+    { name: "Pandas", icon: "/icons/pandas.svg", description: "Data manipulation library for Python." },
+    { name: "Scikit-learn", icon: "/icons/scikit-learn.svg", description: "Machine learning in Python." },
+    { name: "Jupyter", icon: "/icons/jupyter.svg", description: "Interactive notebooks for Python and data science." },
+    { name: "OpenCV", icon: "/icons/opencv.svg", description: "Computer vision library." },
+    { name: "R", icon: "/icons/rlang.svg", description: "Statistical computing and graphics language." }
 ];
 
 export default function AboutMe() {
@@ -56,6 +65,23 @@ export default function AboutMe() {
             </motion.div>
 
             <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+                className="flex justify-center mb-10"
+            >
+                <motion.div
+                    whileHover={{ scale: 1.05, boxShadow: "0px 10px 20px rgba(0, 0, 0, 0.2)" }}
+                    className="flex items-center gap-3 px-6 py-4 rounded-xl shadow-md transition duration-300"
+                    style={{ backgroundColor: "var(--card-bg)", color: "var(--foreground)" }}
+                >
+                    <Mail className="w-6 h-6" />
+                    <span className="text-sm font-semibold">yigit433@gmail.com</span>
+                </motion.div>
+            </motion.div>
+
+            <motion.div
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
@@ -84,13 +110,8 @@ export default function AboutMe() {
                                         color: account.textColor,
                                         backgroundColor: account.color,
                                     }}
-                                    initial={{
-                                        scale: 1,
-                                    }}
-                                    whileHover={{
-                                        boxShadow: "0px 10px 15px rgba(0, 0, 0, 0.2)",
-                                        scale: 1.08,
-                                    }}
+                                    initial={{ scale: 1 }}
+                                    whileHover={{ boxShadow: "0px 10px 15px rgba(0, 0, 0, 0.2)", scale: 1.08 }}
                                 >
                                     <Image
                                         src={account.icon}
@@ -108,20 +129,24 @@ export default function AboutMe() {
 
                 <div className="flex flex-col gap-4">
                     {[
-                        { label: "Location", value: "Turkey" },
+                        { label: "Location", value: "Türkiye" },
                         { label: "Education", value: "B.Sc. in Statistics" },
                         { label: "Backend Stack", value: "GoLang, PostgreSQL, Prisma" },
                         { label: "Frontend Stack", value: "Next.js, React, Tailwind CSS" },
                         { label: "Focus Areas", value: "CI/CD, Data Modeling, Statistical Computing" },
                     ].map((item, index) => (
-                        <div
+                        <motion.div
                             key={index}
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.4, delay: index * 0.1 }}
+                            viewport={{ once: true }}
                             className="rounded-xl p-4 shadow-sm hover:shadow-md transition-all duration-300"
                             style={{ backgroundColor: "var(--card-bg)", color: "var(--foreground)" }}
                         >
                             <p className="text-sm font-medium opacity-70">{item.label}</p>
                             <p className="text-base font-semibold">{item.value}</p>
-                        </div>
+                        </motion.div>
                     ))}
                 </div>
             </motion.div>
@@ -158,42 +183,6 @@ export default function AboutMe() {
                         <p className="text-sm opacity-70 mt-1">{tech.description}</p>
                     </motion.div>
                 ))}
-            </div>
-
-            <div className="grid md:grid-cols-2 gap-6">
-                <motion.div
-                    initial={{ opacity: 0, y: 30 }}
-                    whileHover={{ scale: 1.03, boxShadow: "0px 10px 25px rgba(0,0,0,0.15)", opacity: 0.95 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ type: "spring", stiffness: 200, damping: 20 }}
-                    viewport={{ once: true }}
-                    className="rounded-xl p-6 shadow-md cursor-pointer"
-                    style={{ backgroundColor: "var(--card-bg)", color: "var(--foreground)" }}
-                >
-                    <h3 className="text-xl font-semibold mb-2">Technical Skills</h3>
-                    <ul className="list-disc list-inside text-sm opacity-90 space-y-1">
-                        <li>Programming: Python, R, JavaScript, Go</li>
-                        <li>Web Development: React, Next.js, Tailwind CSS</li>
-                        <li>Data Handling: PostgreSQL, MongoDB, Prisma</li>
-                        <li>Statistical Tools: SPSS, NumPy, Pandas</li>
-                        <li>DevOps: Docker, CI/CD workflows</li>
-                    </ul>
-                </motion.div>
-
-                <motion.div
-                    initial={{ opacity: 0, y: 30 }}
-                    whileHover={{ scale: 1.03, boxShadow: "0px 10px 25px rgba(0,0,0,0.15)", opacity: 0.95 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ type: "spring", stiffness: 200, damping: 20 }}
-                    viewport={{ once: true }}
-                    className="rounded-xl p-6 shadow-md cursor-pointer italic"
-                    style={{ backgroundColor: "var(--card-bg)", color: "var(--foreground)" }}
-                >
-                    <h3 className="text-xl font-semibold mb-2">Professional Note</h3>
-                    <p>
-                        Data-driven thinking combined with robust engineering is the foundation of modern problem-solving.
-                    </p>
-                </motion.div>
             </div>
         </section>
     );
