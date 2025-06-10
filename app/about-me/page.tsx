@@ -147,7 +147,13 @@ export default function AboutMe() {
                         className="flex flex-col items-center p-4 rounded-xl shadow-md hover:shadow-lg transition duration-300 text-center"
                         style={{ backgroundColor: "var(--card-bg)", color: "var(--foreground)" }}
                     >
-                        <img src={tech.icon} alt={tech.name} className="w-10 h-10 mb-2" />
+                        <Image
+                            src={tech.icon}
+                            alt={tech.name}
+                            width={40}
+                            height={40}
+                            className="mb-2 w-10 h-10"
+                        />
                         <h4 className="font-semibold">{tech.name}</h4>
                         <p className="text-sm opacity-70 mt-1">{tech.description}</p>
                     </motion.div>
@@ -185,7 +191,7 @@ export default function AboutMe() {
                 >
                     <h3 className="text-xl font-semibold mb-2">Professional Note</h3>
                     <p>
-                        "Data-driven thinking combined with robust engineering is the foundation of modern problem-solving."
+                        Data-driven thinking combined with robust engineering is the foundation of modern problem-solving.
                     </p>
                 </motion.div>
             </div>
