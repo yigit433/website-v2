@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const techStack = [
   {
@@ -67,10 +68,12 @@ export const TechStackHorizontal = () => {
               style={{ backgroundColor: "var(--card-bg)" }}
               className="relative group flex flex-col items-center justify-center text-center min-w-[110px] max-w-[130px] px-5 py-4 rounded-2xl border border-transparent backdrop-blur-sm transition-all duration-300 hover:bg-background/60 hover:shadow-[0_0_14px_rgba(0,255,160,0.25)] hover:border-cyan-400 hover:backdrop-blur-md will-change-transform will-change-filter"
             >
-              <img
+              <Image
                 src={tech.icon}
                 alt={tech.name}
-                className="w-10 h-10 mb-2"
+                width={40}
+                height={40}
+                className="mb-2 w-10 h-10"
               />
               <p className="text-sm font-semibold text-foreground">
                 {tech.name}
