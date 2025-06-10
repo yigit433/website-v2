@@ -77,7 +77,7 @@ export default function AboutMe() {
                     style={{ backgroundColor: "var(--card-bg)", color: "var(--foreground)" }}
                 >
                     <Mail className="w-6 h-6" />
-                    <span className="text-sm font-semibold">yigit433@gmail.com</span>
+                    <span className="text-sm font-semibold">yigit433.devs@gmail.com</span>
                 </motion.div>
             </motion.div>
 
