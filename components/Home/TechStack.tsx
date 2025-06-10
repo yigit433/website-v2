@@ -68,7 +68,11 @@ const techStack = [
 
 export const TechStackHorizontal = () => {
   return (
-    <div className="flex flex-col items-center gap-4 mt-16">
+    <motion.div
+      className="flex flex-col items-center gap-4 mt-16"
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}>
       <h2 className="text-2xl font-bold px-2">Tech Stack</h2>
       <p className="text-muted-foreground text-sm min-[360px]:text-lg text-center max-w-lg">
         Core technologies I rely on throughout the design, development, and delivery lifecycle.
@@ -114,6 +118,6 @@ export const TechStackHorizontal = () => {
           ))}
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
