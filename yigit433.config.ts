@@ -11,9 +11,9 @@ export default {
         description: "Hello 👋, I'm a student. I'm {age} years old now and I have some small projects. I spend more time from classes on my projects and cycling.",
     },
     routes: [
-        { name: "Ana Sayfa", to: "/" },
-        { name: "Hakkımda", to: "/about" },
-        { name: "Projeler", to: "/projects" },
-        { name: "İletişim", to: "/contact" }
+        { name: "Home", to: "/" },
+        { name: "About me", to: "/about" },
+        { name: "Projects", to: "/projects" },
+        { name: "Contact", to: "/contact" }
     ]
 };
