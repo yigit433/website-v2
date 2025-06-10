@@ -9,7 +9,7 @@ type Props = {
 };
 
 const DesktopMenu = ({ routes, currentPath, router }: Props) => (
-  <ul className="hidden md:flex items-center gap-4">
+  <ul className="max-[940px]:hidden block flex items-center gap-4">
     {routes.map((route, i) => (
       <NavItem key={i} route={route} isActive={currentPath === route.to} router={router} />
     ))}
