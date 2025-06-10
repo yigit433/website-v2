@@ -78,8 +78,11 @@ export default function RepositoriesPage() {
                             href={repo.html_url}
                             target="_blank"
                             rel="noopener noreferrer"
+                            initial={{ opacity: 0, y: 20 }}
                             whileHover={{ scale: isPortfolio ? 1.05 : 1.02 }}
+                            whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.3 }}
+                            viewport={{ once: true }}
                             className={`relative p-5 rounded-xl transition duration-300 shadow-md hover:shadow-lg flex flex-col justify-between
                 ${isPortfolio ? "border-2 border-yellow-400/40" : ""}
                 ${isOldPortfolio ? "opacity-60 hover:opacity-80 border border-gray-400/30" : ""}

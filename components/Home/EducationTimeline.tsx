@@ -21,9 +21,14 @@ const education = [
 export default function EducationTimeline() {
   return (
     <section className="py-12 px-4 max-w-4xl mx-auto">
-      <h2 className="text-3xl font-bold mb-8 text-center">
+      <motion.h2
+        initial={{ opacity: 0, x: -30 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.4 }}
+        viewport={{ once: true }} 
+        className="text-3xl font-bold mb-8 text-center">
         Education Life
-      </h2>
+      </motion.h2>
       <div className="relative border-l-4 border-[color:var(--color-grey)] pl-6 space-y-12">
         {education.map((item, index) => {
           const isCurrent = item.date.includes("Nowadays");
