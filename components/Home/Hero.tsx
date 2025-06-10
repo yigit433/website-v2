@@ -1,6 +1,7 @@
 import Config from "@/yigit433.config";
 
 import HeroImage from "@/components/Home/HeroImage";
+import AgeCalculator from "@/lib/age_calculator";
 
 export default function Hero() {
     return (
@@ -13,7 +14,18 @@ export default function Hero() {
                     </span>
                 </h1>
                 <p className="text-md sm:text-lg md:text-xl text-alignment">
-                    {Config.personal.description}
+                    {Config.personal.description.replace(
+                        "{age}",
+                        String(
+                            AgeCalculator({
+                                day: Config.personal.birthday.day ?? "",
+                                month: Config.personal.birthday.month ?? "",
+                                year: Config.personal.birthday.year ?? "",
+                                time: Config.personal.birthday.time ?? "",
+                                gmt: Config.personal.birthday.gmt ?? "",
+                            })
+                        )
+                    )}
                 </p>
             </div>
             <HeroImage />
