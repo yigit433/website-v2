@@ -1,6 +1,8 @@
 @import "tailwindcss";
 
 :root {
+  --card-bg: rgba(230, 243, 251, 0.45);
+
   /* Arka plan ve yazı */
   --background: linear-gradient(180deg, #ffffff, #f7fbfd);
   --foreground: #212A3E;
@@ -24,6 +26,8 @@
 }
 
 .dark {
+  --card-bg: rgba(47, 59, 87, 0.45);
+
   --background: linear-gradient(135deg, #0a0a0a, #212A3E);
   --foreground: #ededed;
 
