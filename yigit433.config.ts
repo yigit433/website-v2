@@ -22,7 +22,7 @@ export default {
                 color: "#ffffff",
                 textColor: "#000000",
                 name: "Medium",
-                url: "https://medium.com/@avcyigitefe",
+                url: "https://medium.com/@yigit433",
             },
             {
                 icon: "/icons/linkedin.svg",
