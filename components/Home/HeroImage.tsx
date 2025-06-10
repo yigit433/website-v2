@@ -23,11 +23,6 @@ function isRemoteUrl(url: string): boolean {
   return /^https?:\/\//i.test(url);
 }
 
-interface ProfilePictureConfig {
-  src: string;
-  field?: string; 
-}
-
 export default function HeroImage() {
   const [finalImageUrl, setFinalImageUrl] = useState<string | null>(null);
 
@@ -35,7 +30,6 @@ export default function HeroImage() {
   const fieldPath = Config.profilePicture.field;
   const isRemote = profileSrc && isRemoteUrl(profileSrc);
 
-  // Example: GitHub avatar response type
   interface RemoteData {
     [key: string]: unknown;
   }

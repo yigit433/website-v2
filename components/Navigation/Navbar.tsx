@@ -10,7 +10,7 @@ import DesktopMenu from "./DesktopMenu";
 // import ToggleButton from "./ToggleButton";
 
 const Navbar = () => {
-  const [mobNavOpen, setMobNavOpen] = useState(false);
+  // const [mobNavOpen, setMobNavOpen] = useState(false);
   const router = useRouter();
   const pathname = usePathname();
 
