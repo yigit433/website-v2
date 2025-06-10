@@ -1,8 +1,18 @@
 "use client";
 
-import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import useSWR from "swr";
+
+interface GitHubRepo {
+    id: number;
+    name: string;
+    html_url: string;
+    description: string | null;
+    language: string | null;
+    stargazers_count: number;
+    updated_at: string;
+    archived: boolean;
+}
 
 const fetcher = (url: string) => fetch(url).then((res) => res.json());
 
@@ -55,9 +65,9 @@ export default function RepositoriesPage() {
             </motion.h2>
 
             <div className="grid md:grid-cols-2 gap-6">
-                {data.filter((repo: any) => !["bolt.new", "yigit433"].includes(repo.name)).sort(
-                    (a: any, b: any) => new Date(b.updated_at).getTime() - new Date(a.updated_at).getTime()
-                ).map((repo: any, i: number) => {
+                {data.filter((repo: GitHubRepo) => !["bolt.new", "yigit433"].includes(repo.name)).sort(
+                    (a: GitHubRepo, b: GitHubRepo) => new Date(b.updated_at).getTime() - new Date(a.updated_at).getTime()
+                ).map((repo: GitHubRepo) => {
                     const isPortfolio = repo.name === "website-v2";
                     const isOldPortfolio = repo.name === "website";
                     const isArchived = repo.archived;
