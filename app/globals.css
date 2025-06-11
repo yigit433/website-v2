@@ -73,7 +73,6 @@ body {
   transition: background 0.4s ease, color 0.4s ease;
 }
 
-
 @layer utilities {
   .text-gradient-animated {
     background-image: linear-gradient(
