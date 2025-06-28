@@ -8,17 +8,17 @@ import DetailList from "@/components/AboutMe/DetailList";
 import TechStack from "@/components/AboutMe/TechStack";
 
 export const metadata: Metadata = {
-    title: 'Hakkımda – Yiğit Efe Avcı',
-    description: 'Yiğit Efe Avcı hakkında daha fazla bilgi. Geliştirici yolculuğum, ilgi alanlarım ve teknik becerilerim.',
+    title: 'About Me – Yiğit Efe Avcı',
+    description: 'More information about Yiğit Efe Avcı. My developer journey, interests, and technical skills.',
     openGraph: {
-        title: 'Hakkımda – Yiğit Efe Avcı',
-        description: 'Yazılım, veri bilimi ve yapay zeka alanlarında tutkuyla çalışan bir geliştirici.',
+        title: 'About Me – Yiğit Efe Avcı',
+        description: 'A passionate developer working in software, data science, and artificial intelligence.',
         url: 'https://yigit433.vercel.app/about-me',
         siteName: 'Yiğit Efe Avcı',
     },
     twitter: {
-        title: 'Hakkımda – Yiğit Efe Avcı',
-        description: 'Full-stack ve AI projelerine odaklanan geliştirici hakkında detaylı bilgi.',
+        title: 'About Me – Yiğit Efe Avcı',
+        description: 'Detailed information about a developer focused on full-stack and AI projects.',
         card: 'summary',
     },
 };
