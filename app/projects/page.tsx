@@ -33,7 +33,7 @@ const projects = [
     title: "Code Share",
     description: "A platform where you can share your code and earn money.",
     technologies: ["react.js", "Tailwind CSS"],
-    image: "/codeshareme.jpg",
+    image: "/codeshareme.gif",
     buttons: [
       { name: "Visit Site", to: "https://codeshare.me/" },
     ],
