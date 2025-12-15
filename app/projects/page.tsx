@@ -6,12 +6,31 @@ import Image from "next/image";
 
 const projects = [
   {
+    title: "Wsupp.co",
+    description: "WhatsApp marketing automation.",
+    technologies: ["Bun", "Hono", "Typescript", "Tailwind CSS", "Svelte"],
+    image: "/WsuppBanner.webp",
+    buttons: [
+      { name: "Github", to: "https://github.com/Wsupp" },
+      { name: "Visit Site", to: "https://wsupp.co" },
+    ],
+  },
+  {
+    title: "Pickin.co",
+    description: "A minimalist and fast lottery system. It offers real-time updates, a secure participation structure, and a modern interface.",
+    technologies: ["Redis", "PostgreSQL", "Next.js", "Tailwind CSS"],
+    image: "/PickinBanner.png",
+    buttons: [
+      { name: "Visit Site", to: "https://pickin.co" },
+    ],
+  },
+  {
     title: "DORA AI",
     description: "For lives that start tomorrows in health.",
     technologies: ["Python", "FastAPI", "PostgreSQL", "Next.js", "Tailwind CSS"],
     image: "/DoraAI-Banner.png",
     buttons: [
-      { name: "GitHub", to: "https://github.com/Dogumda-Risk-Analizi" },
+      { name: "Github", to: "https://github.com/Dogumda-Risk-Analizi" },
       { name: "Live Demo", to: "#" },
     ],
   },
@@ -23,7 +42,7 @@ const projects = [
     image: "/Ticaret-Istatistik.jpg",
     buttons: [
       {
-        name: "GitHub",
+        name: "Github",
         to: "https://github.com/ticaretistatistik/ticaretistatistik.github.io",
       },
       { name: "Visit Site", to: "https://ticaretistatistik.github.io/" },
