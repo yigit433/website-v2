@@ -1,7 +1,8 @@
-import { describe, it, expect, vi } from "vitest";
+import { describe, it, expect } from "vitest";
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import ProjectsPage from "@/app/[locale]/projects/page";
+import { projects } from "@/data/projects";
 
 describe("ProjectsPage", () => {
   it("renders the heading translation key", () => {
@@ -9,13 +10,13 @@ describe("ProjectsPage", () => {
     expect(screen.getByText("title")).toBeInTheDocument();
   });
 
-  it("renders all project titles", () => {
+  it("renders all project titles as links", () => {
     render(<ProjectsPage />);
-    expect(screen.getByText("Wsupp.co")).toBeInTheDocument();
-    expect(screen.getByText("Pickin.co")).toBeInTheDocument();
-    expect(screen.getByText("DORA AI")).toBeInTheDocument();
-    expect(screen.getByText("Ticaret İstatistik")).toBeInTheDocument();
-    expect(screen.getByText("Code Share")).toBeInTheDocument();
+    for (const project of projects) {
+      const link = screen.getByRole("link", { name: project.title });
+      expect(link).toBeInTheDocument();
+      expect(link).toHaveAttribute("href", `/projects/${project.slug}`);
+    }
   });
 
   it("renders technology badges", () => {

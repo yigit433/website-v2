@@ -9,6 +9,9 @@
       "description": "Më shumë informacion rreth Yiğit Efe Avcı. Udhëtimi im si zhvillues, interesat dhe aftësitë teknike.",
       "ogDescription": "Një zhvillues i apasionuar që punon në fushën e softuerit, shkencës së të dhënave dhe inteligjencës artificiale.",
       "twitterDescription": "Informacion i detajuar rreth një zhvilluesi të fokusuar në projekte full-stack dhe IA."
+    },
+    "projects": {
+      "suffix": "Projekt – Yiğit Efe Avcı"
     }
   },
   "Navigation": {
@@ -67,12 +70,21 @@
     "visitSite": "Vizito Faqen",
     "liveDemo": "Demo Live",
     "github": "Github",
+    "backToProjects": "Kthehu te Projektet",
+    "aboutProject": "Rreth Këtij Projekti",
     "descriptions": {
       "wsupp": "Automatizimi i marketingut në WhatsApp.",
       "pickin": "Një sistem shortesh minimalist dhe i shpejtë. Ofron përditësime në kohë reale, një strukturë pjesëmarrjeje të sigurt dhe një ndërfaqe moderne.",
       "doraai": "Për jetë që fillojnë të nesërmen në shëndet.",
       "ticaretIstatistik": "Ky projekt thekson Programin e Statistikës të Universitetit të Tregtisë të Stambollit, duke ofruar një përmbledhje të shkurtër të strukturës, fushëveprimit dhe mundësive për studentët dhe palët e interesuara.",
       "codeShare": "Një platformë ku mund të ndani kodin tuaj dhe të fitoni para."
+    },
+    "detailDescriptions": {
+      "wsuppDetail": "Wsupp.co është një platformë automatizimi i marketingut në WhatsApp e ndërtuar me Bun, Hono dhe Svelte. Mundëson bizneset të menaxhojnë fushata mesazhesh masive, të ndjekin analitikën e dorëzimit dhe të automatizojnë rrjedhat e punës së angazhimit të klientëve përmes një ndërfaqeje moderne dhe të shpejtë të stilizuar me Tailwind CSS.",
+      "pickinDetail": "Pickin.co është një sistem shortesh minimalist dhe me performancë të lartë i mundësuar nga Redis dhe PostgreSQL në backend me një frontend Next.js. Ofron përditësime të shorteshit në kohë reale, një strukturë pjesëmarrjeje të sigurt dhe transparente, si dhe një ndërfaqe moderne elegante të projektuar për shpejtësi dhe besueshmëri.",
+      "doraaiDetail": "DORA AI (Doğumda Risk Analizi) është një sistem analize të rrezikut të lindjes i mundësuar nga inteligjenca artificiale, i ndërtuar me Python dhe FastAPI në backend dhe Next.js në frontend. Përdor modele të mësimit të makinerisë për të parashikuar dhe vlerësuar rreziqet shëndetësore gjatë lindjes, duke ndihmuar profesionistët mjekësorë të marrin vendime të bazuara në të dhëna për lindje më të sigurta.",
+      "ticaretIstatistikDetail": "Ticaret İstatistik është një projekt ueb që prezanton Programin e Statistikës të Universitetit të Tregtisë të Stambollit. I ndërtuar me Next.js dhe Tailwind CSS, paraqet kurrikulën e programit, stafin akademik, fushat e kërkimit dhe mundësitë e karrierës në një format të pastër dhe të aksesueshëm për studentët e ardhshëm dhe palët e interesuara.",
+      "codeShareDetail": "Code Share është një platformë ueb e ndërtuar me React.js dhe Tailwind CSS ku zhvilluesit mund të ndajnë fragmentet e tyre të kodit publikisht. Ofron një ndërfaqe të thjeshtë dhe intuitive për publikimin, zbulimin dhe organizimin e shembujve të kodit në gjuhë të ndryshme programimi."
     }
   },
   "Repositories": {

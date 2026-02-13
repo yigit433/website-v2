@@ -4,60 +4,8 @@ import { useState } from "react";
 import { useTranslations } from "next-intl";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
-
-const projects = [
-  {
-    title: "Wsupp.co",
-    descriptionKey: "wsupp",
-    technologies: ["Bun", "Hono", "Typescript", "Tailwind CSS", "Svelte"],
-    image: "/WsuppBanner.webp",
-    buttons: [
-      { nameKey: "github", to: "https://github.com/Wsupp" },
-      { nameKey: "visitSite", to: "https://wsupp.co" },
-    ],
-  },
-  {
-    title: "Pickin.co",
-    descriptionKey: "pickin",
-    technologies: ["Redis", "PostgreSQL", "Next.js", "Tailwind CSS"],
-    image: "/PickinBanner.png",
-    buttons: [
-      { nameKey: "visitSite", to: "https://pickin.co" },
-    ],
-  },
-  {
-    title: "DORA AI",
-    descriptionKey: "doraai",
-    technologies: ["Python", "FastAPI", "PostgreSQL", "Next.js", "Tailwind CSS"],
-    image: "/DoraAI-Banner.png",
-    buttons: [
-      { nameKey: "github", to: "https://github.com/Dogumda-Risk-Analizi" },
-      { nameKey: "liveDemo", to: "#" },
-    ],
-  },
-  {
-    title: "Ticaret İstatistik",
-    descriptionKey: "ticaretIstatistik",
-    technologies: ["Next.js", "Tailwind CSS"],
-    image: "/Ticaret-Istatistik.jpg",
-    buttons: [
-      {
-        nameKey: "github",
-        to: "https://github.com/ticaretistatistik/ticaretistatistik.github.io",
-      },
-      { nameKey: "visitSite", to: "https://ticaretistatistik.github.io/" },
-    ],
-  },
-  {
-    title: "Code Share",
-    descriptionKey: "codeShare",
-    technologies: ["react.js", "Tailwind CSS"],
-    image: "/codeshareme.gif",
-    buttons: [
-      { nameKey: "visitSite", to: "https://codeshare.me/" },
-    ],
-  },
-];
+import { Link } from "@/i18n/navigation";
+import { projects } from "@/data/projects";
 
 export default function ProjectsPage() {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
@@ -78,7 +26,7 @@ export default function ProjectsPage() {
       <div className="space-y-16">
         {projects.map((project, i) => (
           <motion.div
-            key={i}
+            key={project.slug}
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ type: "spring", stiffness: 100, damping: 12, delay: i * 0.15 }}
@@ -104,13 +52,17 @@ export default function ProjectsPage() {
             )}
 
             <div className="md:w-1/2 mt-6 md:mt-0 md:px-6">
-              <h3 className="text-2xl font-semibold mb-2">{project.title}</h3>
+              <h3 className="text-2xl font-semibold mb-2">
+                <Link href={`/projects/${project.slug}`} className="hover:underline">
+                  {project.title}
+                </Link>
+              </h3>
               <p className="text-sm opacity-80 mb-4">{t(`descriptions.${project.descriptionKey}`)}</p>
 
               <div className="flex flex-wrap gap-2 text-xs font-medium mb-4">
-                {project.technologies.map((tech, j) => (
+                {project.technologies.map((tech) => (
                   <span
-                    key={j}
+                    key={tech}
                     className="px-2 py-1 rounded bg-[color:var(--btn-bg)] text-[color:var(--btn-text)]"
                   >
                     {tech}
@@ -119,9 +71,9 @@ export default function ProjectsPage() {
               </div>
 
               <div className="flex flex-wrap gap-3">
-                {project.buttons?.map((btn, k) => (
+                {project.buttons?.map((btn) => (
                   <a
-                    key={k}
+                    key={btn.to}
                     href={btn.to}
                     target="_blank"
                     rel="noopener noreferrer"
