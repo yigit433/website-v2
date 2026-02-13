@@ -4,6 +4,8 @@ import { notFound } from "next/navigation";
 import { ThemeProvider } from "next-themes";
 import { routing } from "@/i18n/routing";
 import Navbar from "@/components/Navigation/Navbar";
+import PageTransition from "@/components/PageTransition";
+import CommandPaletteProvider from "@/components/CommandPalette/CommandPaletteProvider";
 
 type Props = {
   children: React.ReactNode;
@@ -30,7 +32,10 @@ export default async function LocaleLayout({ children, params }: Props) {
         <NextIntlClientProvider messages={messages}>
           <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
             <Navbar />
-            <main className="pt-20">{children}</main>
+            <CommandPaletteProvider />
+            <main className="pt-20">
+              <PageTransition>{children}</PageTransition>
+            </main>
           </ThemeProvider>
         </NextIntlClientProvider>
       </body>

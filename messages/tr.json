@@ -90,6 +90,15 @@
     "message": "Hay aksi! Bu sayfa dijital vahşi doğaya karıştı. Belki efsanevi bir şeyle karşılaştı? Hadi seni doğru yola geri getirelim.",
     "returnHome": "Ana Sayfaya Dön"
   },
+  "CommandPalette": {
+    "placeholder": "Komut ara...",
+    "navigation": "Gezinme",
+    "actions": "İşlemler",
+    "noResults": "Sonuç bulunamadı.",
+    "toggleDark": "Karanlık Moda Geç",
+    "toggleLight": "Aydınlık Moda Geç",
+    "switchLocale": "Dil Değiştir"
+  },
   "ThemeToggle": {
     "label": "Tema değiştir"
   },

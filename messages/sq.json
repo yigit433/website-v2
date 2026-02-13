@@ -90,6 +90,15 @@
     "message": "Oops! Kjo faqe u humb në natyrën dixhitale. Ndoshta hasi diçka legjendare? Le t'ju kthejmë në rrugën e duhur.",
     "returnHome": "Kthehu në Ballinë"
   },
+  "CommandPalette": {
+    "placeholder": "Kërko komanda...",
+    "navigation": "Navigimi",
+    "actions": "Veprimet",
+    "noResults": "Nuk u gjetën rezultate.",
+    "toggleDark": "Kalo në Modalitetin e Errët",
+    "toggleLight": "Kalo në Modalitetin e Ndritshëm",
+    "switchLocale": "Ndrysho Gjuhën"
+  },
   "ThemeToggle": {
     "label": "Ndrysho temën"
   },

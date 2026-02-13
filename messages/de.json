@@ -90,6 +90,15 @@
     "message": "Hoppla! Diese Seite hat sich in die digitale Wildnis verirrt. Vielleicht ist sie auf etwas Legendäres gestoßen? Lassen Sie uns Sie wieder auf den richtigen Weg bringen.",
     "returnHome": "Zurück zur Startseite"
   },
+  "CommandPalette": {
+    "placeholder": "Befehle suchen...",
+    "navigation": "Navigation",
+    "actions": "Aktionen",
+    "noResults": "Keine Ergebnisse gefunden.",
+    "toggleDark": "Dunkelmodus aktivieren",
+    "toggleLight": "Hellmodus aktivieren",
+    "switchLocale": "Sprache wechseln"
+  },
   "ThemeToggle": {
     "label": "Thema wechseln"
   },

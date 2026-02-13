@@ -3,6 +3,7 @@
 import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 import useSWR from "swr";
+import RepositorySkeleton from "@/components/RepositorySkeleton";
 
 interface GitHubRepo {
     id: number;
@@ -26,16 +27,10 @@ export default function RepositoriesPage() {
 
     if (isLoading) {
         return (
-            <section className="py-32 px-4 max-w-6xl mx-auto text-center">
-                <motion.div
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ duration: 0.5 }}
-                    className="text-xl font-semibold text-[color:var(--foreground)]"
-                >
-                    {t("loading")}
-                </motion.div>
-            </section>
+            <>
+                <RepositorySkeleton />
+                <span className="sr-only">{t("loading")}</span>
+            </>
         );
     }
 

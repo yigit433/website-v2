@@ -90,6 +90,15 @@
     "message": "Oops! This page wandered into the digital wilderness. Maybe it ran into something legendary? Let's get you back on track.",
     "returnHome": "Return to Home"
   },
+  "CommandPalette": {
+    "placeholder": "Search commands...",
+    "navigation": "Navigation",
+    "actions": "Actions",
+    "noResults": "No results found.",
+    "toggleDark": "Switch to Dark Mode",
+    "toggleLight": "Switch to Light Mode",
+    "switchLocale": "Switch Language"
+  },
   "ThemeToggle": {
     "label": "Toggle theme"
   },
