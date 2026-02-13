@@ -84,3 +84,52 @@ vi.mock("framer-motion", () => ({
     set: vi.fn(),
   }),
 }));
+
+// Mock next-intl
+vi.mock("next-intl", () => ({
+  useTranslations: (namespace?: string) => {
+    return (key: string, values?: Record<string, unknown>) => {
+      const fullKey = namespace ? `${key}` : key;
+      if (values) {
+        let result = fullKey;
+        Object.entries(values).forEach(([k, v]) => {
+          result = result.replace(`{${k}}`, String(v));
+        });
+        return result;
+      }
+      return fullKey;
+    };
+  },
+  useLocale: () => "tr",
+  NextIntlClientProvider: ({ children }: { children: React.ReactNode }) =>
+    React.createElement(React.Fragment, null, children),
+  hasLocale: () => true,
+}));
+
+// Mock @/i18n/navigation
+vi.mock("@/i18n/navigation", () => ({
+  Link: ({
+    children,
+    href,
+    ...rest
+  }: {
+    children: React.ReactNode;
+    href: string;
+    [key: string]: unknown;
+  }) => React.createElement("a", { href, ...rest }, children),
+  useRouter: () => ({
+    push: vi.fn(),
+    replace: vi.fn(),
+    prefetch: vi.fn(),
+    back: vi.fn(),
+  }),
+  usePathname: () => "/",
+}));
+
+// Mock @/i18n/routing
+vi.mock("@/i18n/routing", () => ({
+  routing: {
+    locales: ["tr", "en", "de"],
+    defaultLocale: "tr",
+  },
+}));

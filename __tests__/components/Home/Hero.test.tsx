@@ -8,9 +8,7 @@ vi.mock("@/yigit433.config", () => ({
     profilePicture: { src: "/test-pic.jpg", field: "" },
     personal: {
       name: "Test",
-      position: "Full-stack Developer",
       email: "test@test.com",
-      description: "Hello, I'm {age} years old.",
       birthday: {
         day: "1",
         month: "1",
@@ -29,20 +27,14 @@ vi.mock("@/components/Home/HeroImage", () => ({
 }));
 
 describe("Hero", () => {
-  it("renders the position from config", () => {
+  it("renders the selfTaught translation key", () => {
     render(<Hero />);
-    expect(screen.getByText("Full-stack Developer")).toBeInTheDocument();
+    expect(screen.getByText("selfTaught")).toBeInTheDocument();
   });
 
-  it("renders Self-taught text", () => {
+  it("renders the position translation key", () => {
     render(<Hero />);
-    expect(screen.getByText(/Self-taught/)).toBeInTheDocument();
-  });
-
-  it("renders description with computed age", () => {
-    render(<Hero />);
-    // The description should contain "Hello" and the age number
-    expect(screen.getByText(/Hello/)).toBeInTheDocument();
+    expect(screen.getByText("position")).toBeInTheDocument();
   });
 
   it("renders HeroImage component", () => {

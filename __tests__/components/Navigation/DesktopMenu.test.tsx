@@ -2,17 +2,6 @@ import { describe, it, expect, vi } from "vitest";
 import { render, screen } from "@testing-library/react";
 import DesktopMenu from "@/components/Navigation/DesktopMenu";
 
-vi.mock("next/navigation", () => ({
-  useRouter: () => ({
-    push: vi.fn(),
-    replace: vi.fn(),
-    prefetch: vi.fn(),
-    back: vi.fn(),
-    forward: vi.fn(),
-    refresh: vi.fn(),
-  }),
-}));
-
 vi.mock("next-themes", () => ({
   useTheme: () => ({
     theme: "light",
@@ -33,11 +22,7 @@ describe("DesktopMenu", () => {
   const mockRouter = {
     push: vi.fn(),
     replace: vi.fn(),
-    prefetch: vi.fn(),
-    back: vi.fn(),
-    forward: vi.fn(),
-    refresh: vi.fn(),
-  } as ReturnType<typeof import("next/navigation").useRouter>;
+  };
 
   it("renders all route items", () => {
     render(
@@ -52,9 +37,7 @@ describe("DesktopMenu", () => {
     render(
       <DesktopMenu routes={routes} currentPath="/" router={mockRouter} />
     );
-    const themeButton = screen.getByRole("button", {
-      name: /tema değiştir/i,
-    });
+    const themeButton = screen.getByRole("button", { name: "label" });
     expect(themeButton).toBeInTheDocument();
   });
 });

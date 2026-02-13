@@ -1,12 +1,12 @@
 import { describe, it, expect, vi } from "vitest";
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import ProjectsPage from "@/app/projects/page";
+import ProjectsPage from "@/app/[locale]/projects/page";
 
 describe("ProjectsPage", () => {
-  it("renders the heading", () => {
+  it("renders the heading translation key", () => {
     render(<ProjectsPage />);
-    expect(screen.getByText("Projects")).toBeInTheDocument();
+    expect(screen.getByText("title")).toBeInTheDocument();
   });
 
   it("renders all project titles", () => {
@@ -26,22 +26,18 @@ describe("ProjectsPage", () => {
     expect(screen.getByText("Python")).toBeInTheDocument();
   });
 
-  it("renders project descriptions", () => {
+  it("renders project description translation keys", () => {
     render(<ProjectsPage />);
-    expect(
-      screen.getByText("WhatsApp marketing automation.")
-    ).toBeInTheDocument();
-    expect(
-      screen.getByText(/A platform where you can share your code/)
-    ).toBeInTheDocument();
+    expect(screen.getByText("descriptions.wsupp")).toBeInTheDocument();
+    expect(screen.getByText("descriptions.pickin")).toBeInTheDocument();
   });
 
-  it("renders action buttons with links", () => {
+  it("renders action buttons with translation keys", () => {
     render(<ProjectsPage />);
-    const githubLinks = screen.getAllByText("Github");
+    const githubLinks = screen.getAllByText("github");
     expect(githubLinks.length).toBeGreaterThanOrEqual(1);
 
-    const visitLinks = screen.getAllByText("Visit Site");
+    const visitLinks = screen.getAllByText("visitSite");
     expect(visitLinks.length).toBeGreaterThanOrEqual(1);
   });
 
@@ -49,14 +45,12 @@ describe("ProjectsPage", () => {
     const user = userEvent.setup();
     render(<ProjectsPage />);
 
-    // Click on a project image container
     const images = screen.getAllByRole("img");
     const firstImage = images[0];
     const imageContainer = firstImage.closest(".cursor-zoom-in");
 
     if (imageContainer) {
       await user.click(imageContainer);
-      // After clicking, a fullscreen preview should appear
       expect(screen.getByAltText("Fullscreen Preview")).toBeInTheDocument();
     }
   });
@@ -65,7 +59,6 @@ describe("ProjectsPage", () => {
     const user = userEvent.setup();
     render(<ProjectsPage />);
 
-    // Open the overlay
     const images = screen.getAllByRole("img");
     const imageContainer = images[0].closest(".cursor-zoom-in");
 
@@ -73,7 +66,6 @@ describe("ProjectsPage", () => {
       await user.click(imageContainer);
       expect(screen.getByAltText("Fullscreen Preview")).toBeInTheDocument();
 
-      // Close the overlay by clicking on it
       const overlay = screen.getByAltText("Fullscreen Preview").closest(".cursor-zoom-out");
       if (overlay) {
         await user.click(overlay);

@@ -1,13 +1,12 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { useRouter } from "next/navigation";
 
 type Props = {
   route: { name: string; to: string };
   isActive: boolean;
   onClick?: () => void;
-  router?: ReturnType<typeof useRouter>;
+  router?: { push: (href: string) => void };
   isMobile?: boolean;
 };
 

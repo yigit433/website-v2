@@ -1,12 +1,12 @@
 import { motion } from "framer-motion";
-import { useRouter } from "next/navigation";
 import NavItem from "./NavItem";
+import LocaleSwitcher from "./LocaleSwitcher";
 
 type Props = {
   routes: { name: string; to: string }[];
   currentPath: string;
   closeMenu: () => void;
-  router: ReturnType<typeof useRouter>;
+  router: { push: (href: string) => void };
 };
 
 const MobileMenu = ({ routes, currentPath, closeMenu, router }: Props) => (
@@ -31,6 +31,9 @@ const MobileMenu = ({ routes, currentPath, closeMenu, router }: Props) => (
           />
         </li>
       ))}
+      <li className="flex justify-center pt-2">
+        <LocaleSwitcher />
+      </li>
     </ul>
   </motion.div>
 );

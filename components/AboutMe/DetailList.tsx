@@ -1,19 +1,22 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import { motion } from 'framer-motion';
 
-const details = [
-  { label: 'Location', value: 'Türkiye' },
-  { label: 'Education', value: 'B.Sc. in Statistics' },
-  { label: 'Backend Stack', value: 'GoLang, PostgreSQL, Prisma' },
-  { label: 'Frontend Stack', value: 'Next.js, React, Tailwind CSS' },
-  { label: 'Focus Areas', value: 'CI/CD, Data Modeling, Statistical Computing' },
+const detailKeys = [
+  { labelKey: 'location', valueKey: 'locationValue' },
+  { labelKey: 'education', valueKey: 'educationValue' },
+  { labelKey: 'backendStack', valueKey: 'backendStackValue' },
+  { labelKey: 'frontendStack', valueKey: 'frontendStackValue' },
+  { labelKey: 'focusAreas', valueKey: 'focusAreasValue' },
 ];
 
 export default function DetailList() {
+  const t = useTranslations("AboutMe.details");
+
   return (
     <div className="flex flex-col gap-4">
-      {details.map((item, index) => (
+      {detailKeys.map((item, index) => (
         <motion.div
           key={index}
           initial={{ opacity: 0, y: 20 }}
@@ -23,8 +26,8 @@ export default function DetailList() {
           className="rounded-xl p-4 shadow-sm hover:shadow-md transition-all duration-300"
           style={{ backgroundColor: 'var(--card-bg)', color: 'var(--foreground)' }}
         >
-          <p className="text-sm font-medium opacity-70">{item.label}</p>
-          <p className="text-base font-semibold">{item.value}</p>
+          <p className="text-sm font-medium opacity-70">{t(item.labelKey)}</p>
+          <p className="text-base font-semibold">{t(item.valueKey)}</p>
         </motion.div>
       ))}
     </div>

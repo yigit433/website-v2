@@ -1,86 +1,42 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
-const techStack = [
-  {
-    name: "Framer Motion",
-    icon: "/icons/framer-motion.svg",
-    description: "Powerful animation library for React and modern UIs.",
-  },
-  {
-    name: "React",
-    icon: "/icons/react.svg",
-    description: "UI library for building user interfaces.",
-  },
-  {
-    name: "Next.js",
-    icon: "/icons/nextjs.svg",
-    description: "Fullstack framework for modern React apps.",
-  },
-  {
-    name: "Tailwind CSS",
-    icon: "/icons/tailwindcss.svg",
-    description: "Utility-first CSS framework for rapid UI dev.",
-  },
-  {
-    name: "TypeScript",
-    icon: "/icons/typescript.svg",
-    description: "Typed superset of JavaScript.",
-  },
-  {
-    name: "GoLang",
-    icon: "/icons/golang.svg",
-    description: "Compiled language for backend and systems.",
-  },
-  {
-    name: "Flutter",
-    icon: "/icons/flutter.svg",
-    description: "Cross-platform UI toolkit for building apps with Dart.",
-  },
-  {
-    name: "Supabase",
-    icon: "/icons/supabase.svg",
-    description: "Open source Firebase alternative with Postgres.",
-  },
-  {
-    name: "Docker",
-    icon: "/icons/docker.svg",
-    description: "Container platform for building and deploying applications.",
-  },
-  {
-    name: "Prisma",
-    icon: "/icons/prisma.svg",
-    description: "Next-gen ORM for TypeScript and Node.js backed by a powerful query engine.",
-  },
-  {
-    name: "MongoDB",
-    icon: "/icons/mongodb.svg",
-    description: "NoSQL database designed for high-volume JSON-like documents.",
-  },
-  {
-    name: "PostgreSQL",
-    icon: "/icons/postgresql.svg",
-    description: "Advanced open-source relational database with SQL support.",
-  },
+const techStackItems = [
+  { name: "Framer Motion", icon: "/icons/framer-motion.svg", key: "framerMotion" },
+  { name: "React", icon: "/icons/react.svg", key: "react" },
+  { name: "Next.js", icon: "/icons/nextjs.svg", key: "nextjs" },
+  { name: "Tailwind CSS", icon: "/icons/tailwindcss.svg", key: "tailwindcss" },
+  { name: "TypeScript", icon: "/icons/typescript.svg", key: "typescript" },
+  { name: "GoLang", icon: "/icons/golang.svg", key: "golang" },
+  { name: "Flutter", icon: "/icons/flutter.svg", key: "flutter" },
+  { name: "Supabase", icon: "/icons/supabase.svg", key: "supabase" },
+  { name: "Docker", icon: "/icons/docker.svg", key: "docker" },
+  { name: "Prisma", icon: "/icons/prisma.svg", key: "prisma" },
+  { name: "MongoDB", icon: "/icons/mongodb.svg", key: "mongodb" },
+  { name: "PostgreSQL", icon: "/icons/postgresql.svg", key: "postgresql" },
 ];
 
 export const TechStackHorizontal = () => {
+  const tHome = useTranslations("Home");
+  const tTech = useTranslations("TechStack");
+
   return (
     <motion.div
       className="flex flex-col items-center gap-4 mt-16"
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, ease: "easeOut" }}>
-      <h2 className="text-2xl font-bold px-2">Tech Stack</h2>
+      <h2 className="text-2xl font-bold px-2">{tHome("techStackTitle")}</h2>
       <p className="text-muted-foreground text-sm min-[360px]:text-lg text-center max-w-lg">
-        Core technologies I rely on throughout the design, development, and delivery lifecycle.
+        {tHome("techStackDescription")}
       </p>
       <div className="relative w-full max-w-6xl px-4">
         <div
           className="
-            grid 
+            grid
             place-items-center
             max-[360px]:grid-cols-1
             max-[550px]:grid-cols-2
@@ -89,7 +45,7 @@ export const TechStackHorizontal = () => {
             xl:grid-cols-6
             gap-4 py-4"
         >
-          {techStack.map((tech) => (
+          {techStackItems.map((tech) => (
             <motion.div
               key={tech.name}
               whileHover={{
@@ -112,7 +68,7 @@ export const TechStackHorizontal = () => {
 
               {/* Tooltip */}
               <div className="absolute bottom-full mb-2 w-40 px-2 py-1 text-xs text-center bg-muted/80 backdrop-blur-sm text-foreground rounded opacity-0 group-hover:opacity-100 transition pointer-events-none z-50">
-                {tech.description}
+                {tTech(tech.key)}
               </div>
             </motion.div>
           ))}

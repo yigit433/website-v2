@@ -1,66 +1,67 @@
 "use client";
 
 import { useState } from "react";
+import { useTranslations } from "next-intl";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 
 const projects = [
   {
     title: "Wsupp.co",
-    description: "WhatsApp marketing automation.",
+    descriptionKey: "wsupp",
     technologies: ["Bun", "Hono", "Typescript", "Tailwind CSS", "Svelte"],
     image: "/WsuppBanner.webp",
     buttons: [
-      { name: "Github", to: "https://github.com/Wsupp" },
-      { name: "Visit Site", to: "https://wsupp.co" },
+      { nameKey: "github", to: "https://github.com/Wsupp" },
+      { nameKey: "visitSite", to: "https://wsupp.co" },
     ],
   },
   {
     title: "Pickin.co",
-    description: "A minimalist and fast lottery system. It offers real-time updates, a secure participation structure, and a modern interface.",
+    descriptionKey: "pickin",
     technologies: ["Redis", "PostgreSQL", "Next.js", "Tailwind CSS"],
     image: "/PickinBanner.png",
     buttons: [
-      { name: "Visit Site", to: "https://pickin.co" },
+      { nameKey: "visitSite", to: "https://pickin.co" },
     ],
   },
   {
     title: "DORA AI",
-    description: "For lives that start tomorrows in health.",
+    descriptionKey: "doraai",
     technologies: ["Python", "FastAPI", "PostgreSQL", "Next.js", "Tailwind CSS"],
     image: "/DoraAI-Banner.png",
     buttons: [
-      { name: "Github", to: "https://github.com/Dogumda-Risk-Analizi" },
-      { name: "Live Demo", to: "#" },
+      { nameKey: "github", to: "https://github.com/Dogumda-Risk-Analizi" },
+      { nameKey: "liveDemo", to: "#" },
     ],
   },
   {
     title: "Ticaret İstatistik",
-    description:
-      "This project highlights the Istanbul Commerce University Statistics Program, offering a concise overview of its structure, scope, and opportunities for students and stakeholders.",
+    descriptionKey: "ticaretIstatistik",
     technologies: ["Next.js", "Tailwind CSS"],
     image: "/Ticaret-Istatistik.jpg",
     buttons: [
       {
-        name: "Github",
+        nameKey: "github",
         to: "https://github.com/ticaretistatistik/ticaretistatistik.github.io",
       },
-      { name: "Visit Site", to: "https://ticaretistatistik.github.io/" },
+      { nameKey: "visitSite", to: "https://ticaretistatistik.github.io/" },
     ],
   },
   {
     title: "Code Share",
-    description: "A platform where you can share your code and earn money.",
+    descriptionKey: "codeShare",
     technologies: ["react.js", "Tailwind CSS"],
     image: "/codeshareme.gif",
     buttons: [
-      { name: "Visit Site", to: "https://codeshare.me/" },
+      { nameKey: "visitSite", to: "https://codeshare.me/" },
     ],
   },
 ];
 
 export default function ProjectsPage() {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const t = useTranslations("Projects");
 
   return (
     <section className="py-16 px-4 max-w-6xl mx-auto">
@@ -71,7 +72,7 @@ export default function ProjectsPage() {
         viewport={{ once: true }}
         className="text-4xl font-bold mb-12 text-center text-gradient-animated"
       >
-        Projects
+        {t("title")}
       </motion.h2>
 
       <div className="space-y-16">
@@ -85,7 +86,6 @@ export default function ProjectsPage() {
             className={`md:flex md:items-center rounded-xl p-4 md:p-6 shadow-md hover:shadow-xl transition-all duration-300 ${i % 2 === 0 ? "" : "md:flex-row-reverse"}`}
             style={{ backgroundColor: "var(--card-bg)", color: "var(--foreground)" }}
           >
-            {/* Görsel */}
             {project.image && (
               <div className="md:w-1/2 w-full flex justify-center items-center">
                 <div
@@ -103,10 +103,9 @@ export default function ProjectsPage() {
               </div>
             )}
 
-            {/* İçerik */}
             <div className="md:w-1/2 mt-6 md:mt-0 md:px-6">
               <h3 className="text-2xl font-semibold mb-2">{project.title}</h3>
-              <p className="text-sm opacity-80 mb-4">{project.description}</p>
+              <p className="text-sm opacity-80 mb-4">{t(`descriptions.${project.descriptionKey}`)}</p>
 
               <div className="flex flex-wrap gap-2 text-xs font-medium mb-4">
                 {project.technologies.map((tech, j) => (
@@ -129,7 +128,7 @@ export default function ProjectsPage() {
                     className="px-4 py-2 text-sm font-medium rounded-md shadow-sm transition-all duration-300 hover:scale-105 hover:shadow-md"
                     style={{ backgroundColor: "var(--btn-bg)", color: "var(--btn-text)" }}
                   >
-                    {btn.name}
+                    {t(btn.nameKey)}
                   </a>
                 ))}
               </div>

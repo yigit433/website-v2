@@ -1,37 +1,39 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 
-const education = [
-  {
-    school: "Istanbul Ticaret University",
-    degree: "Bachelor's degree in Statistics",
-    date: "2023 - Nowadays",
-    description:
-      "I focused on probability theory, data analysis, and regression modeling. I work with statistical tools like R, SPSS, and Python to produce data-driven insights.",
-  },
-  {
-    school: "Ihsan Mermerci Anatolian High School",
-    degree: "High School",
-    date: "2018 - 2022",
-    description: "Focus on Mathematics and Science",
-  },
-];
-
 export default function EducationTimeline() {
+  const t = useTranslations("Education");
+
+  const education = [
+    {
+      school: t("items.university.school"),
+      degree: t("items.university.degree"),
+      date: t("items.university.date"),
+      description: t("items.university.description"),
+    },
+    {
+      school: t("items.highSchool.school"),
+      degree: t("items.highSchool.degree"),
+      date: t("items.highSchool.date"),
+      description: t("items.highSchool.description"),
+    },
+  ];
+
   return (
     <section className="py-12 px-4 max-w-4xl mx-auto">
       <motion.h2
         initial={{ opacity: 0, x: -30 }}
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.4 }}
-        viewport={{ once: true }} 
+        viewport={{ once: true }}
         className="text-3xl font-bold mb-8 text-center">
-        Education Life
+        {t("title")}
       </motion.h2>
       <div className="relative border-l-4 border-[color:var(--color-grey)] pl-6 space-y-12">
         {education.map((item, index) => {
-          const isCurrent = item.date.includes("Nowadays");
+          const isCurrent = item.date.includes(t("current"));
           return (
             <motion.div
               key={index}
@@ -50,7 +52,6 @@ export default function EducationTimeline() {
                 className="relative p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300"
                 style={{ backgroundColor: "var(--card-bg)", color: "var(--foreground)" }}
               >
-                {/* Date Badge */}
                 <span className="absolute right-4 top-4 text-xs font-medium text-gradient-animated">
                   {item.date}
                 </span>

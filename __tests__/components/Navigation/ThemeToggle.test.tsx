@@ -18,7 +18,8 @@ vi.mock("next-themes", () => ({
 describe("ThemeToggle", () => {
   it("renders the theme toggle button", () => {
     render(<ThemeToggle />);
-    const button = screen.getByRole("button", { name: /tema değiştir/i });
+    // The aria-label comes from the translation key "label"
+    const button = screen.getByRole("button", { name: "label" });
     expect(button).toBeInTheDocument();
   });
 
@@ -26,7 +27,7 @@ describe("ThemeToggle", () => {
     const user = userEvent.setup();
     render(<ThemeToggle />);
 
-    const button = screen.getByRole("button", { name: /tema değiştir/i });
+    const button = screen.getByRole("button", { name: "label" });
     await user.click(button);
 
     expect(mockSetTheme).toHaveBeenCalledWith("dark");

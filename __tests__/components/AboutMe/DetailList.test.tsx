@@ -5,26 +5,20 @@ import DetailList from "@/components/AboutMe/DetailList";
 describe("DetailList", () => {
   it("renders all detail labels", () => {
     render(<DetailList />);
-    expect(screen.getByText("Location")).toBeInTheDocument();
-    expect(screen.getByText("Education")).toBeInTheDocument();
-    expect(screen.getByText("Backend Stack")).toBeInTheDocument();
-    expect(screen.getByText("Frontend Stack")).toBeInTheDocument();
-    expect(screen.getByText("Focus Areas")).toBeInTheDocument();
+    expect(screen.getByText("location")).toBeInTheDocument();
+    expect(screen.getByText("education")).toBeInTheDocument();
+    expect(screen.getByText("backendStack")).toBeInTheDocument();
+    expect(screen.getByText("frontendStack")).toBeInTheDocument();
+    expect(screen.getByText("focusAreas")).toBeInTheDocument();
   });
 
   it("renders all detail values", () => {
     render(<DetailList />);
-    expect(screen.getByText("Türkiye")).toBeInTheDocument();
-    expect(screen.getByText("B.Sc. in Statistics")).toBeInTheDocument();
-    expect(
-      screen.getByText("GoLang, PostgreSQL, Prisma")
-    ).toBeInTheDocument();
-    expect(
-      screen.getByText("Next.js, React, Tailwind CSS")
-    ).toBeInTheDocument();
-    expect(
-      screen.getByText("CI/CD, Data Modeling, Statistical Computing")
-    ).toBeInTheDocument();
+    expect(screen.getByText("locationValue")).toBeInTheDocument();
+    expect(screen.getByText("educationValue")).toBeInTheDocument();
+    expect(screen.getByText("backendStackValue")).toBeInTheDocument();
+    expect(screen.getByText("frontendStackValue")).toBeInTheDocument();
+    expect(screen.getByText("focusAreasValue")).toBeInTheDocument();
   });
 
   it("renders 5 detail items", () => {

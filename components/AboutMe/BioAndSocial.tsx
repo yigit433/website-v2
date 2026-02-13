@@ -1,19 +1,22 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Config from "@/yigit433.config";
 
 export default function BioAndSocial() {
+    const t = useTranslations("AboutMe");
+
     return (
         <div
             className="md:col-span-2 p-6 rounded-2xl shadow-md"
             style={{ backgroundColor: 'var(--card-bg)', color: 'var(--foreground)' }}
         >
             <p className="text-lg leading-relaxed">
-                I am a statistics undergraduate with a strong interest in data science, software development, and statistical modeling. I specialize in transforming data into actionable insights using tools like Python, R, and SPSS.
+                {t("bio")}
                 <br /> <br />
-                My technical focus extends to full-stack development, where I utilize technologies such as React, Next.js, Go, and PostgreSQL to build scalable, efficient, and user-centric web applications.
+                {t("bio2")}
             </p>
 
             <ul className="mt-6 flex items-center justify-start space-x-4 flex-wrap">

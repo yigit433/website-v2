@@ -3,17 +3,6 @@ import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import NavItem from "@/components/Navigation/NavItem";
 
-vi.mock("next/navigation", () => ({
-  useRouter: () => ({
-    push: vi.fn(),
-    replace: vi.fn(),
-    prefetch: vi.fn(),
-    back: vi.fn(),
-    forward: vi.fn(),
-    refresh: vi.fn(),
-  }),
-}));
-
 describe("NavItem", () => {
   const route = { name: "Home", to: "/" };
 
@@ -34,14 +23,7 @@ describe("NavItem", () => {
   it("calls router.push when no onClick provided", async () => {
     const user = userEvent.setup();
     const mockPush = vi.fn();
-    const mockRouter = {
-      push: mockPush,
-      replace: vi.fn(),
-      prefetch: vi.fn(),
-      back: vi.fn(),
-      forward: vi.fn(),
-      refresh: vi.fn(),
-    } as ReturnType<typeof import("next/navigation").useRouter>;
+    const mockRouter = { push: mockPush };
 
     render(<NavItem route={route} isActive={false} router={mockRouter} />);
 
