@@ -9,6 +9,7 @@ const localeData: Record<string, { label: string; flag: string }> = {
   tr: { label: "TR", flag: "\u{1F1F9}\u{1F1F7}" },
   en: { label: "EN", flag: "\u{1F1EC}\u{1F1E7}" },
   de: { label: "DE", flag: "\u{1F1E9}\u{1F1EA}" },
+  sq: { label: "SQ", flag: "\u{1F1E6}\u{1F1F1}" },
 };
 
 export default function LocaleSwitcher({ mobile = false }: { mobile?: boolean }) {

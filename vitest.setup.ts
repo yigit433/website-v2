@@ -129,7 +129,7 @@ vi.mock("@/i18n/navigation", () => ({
 // Mock @/i18n/routing
 vi.mock("@/i18n/routing", () => ({
   routing: {
-    locales: ["tr", "en", "de"],
+    locales: ["tr", "en", "de", "sq"],
     defaultLocale: "tr",
   },
 }));
