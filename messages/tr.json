@@ -9,6 +9,9 @@
       "description": "Yiğit Efe Avcı hakkında daha fazla bilgi. Geliştirici yolculuğum, ilgi alanlarım ve teknik becerilerim.",
       "ogDescription": "Yazılım, veri bilimi ve yapay zeka alanlarında çalışan tutkulu bir geliştirici.",
       "twitterDescription": "Full-stack ve yapay zeka projelerine odaklanan bir geliştirici hakkında detaylı bilgi."
+    },
+    "projects": {
+      "suffix": "Proje – Yiğit Efe Avcı"
     }
   },
   "Navigation": {
@@ -67,12 +70,49 @@
     "visitSite": "Siteyi Ziyaret Et",
     "liveDemo": "Canlı Demo",
     "github": "Github",
+    "backToProjects": "Projelere Dön",
+    "aboutProject": "Bu Proje Hakkında",
     "descriptions": {
       "wsupp": "WhatsApp pazarlama otomasyonu.",
       "pickin": "Minimalist ve hızlı bir çekiliş sistemi. Gerçek zamanlı güncellemeler, güvenli bir katılım yapısı ve modern bir arayüz sunar.",
       "doraai": "Sağlıkta yarınlara başlayan hayatlar için.",
       "ticaretIstatistik": "Bu proje, İstanbul Ticaret Üniversitesi İstatistik Programını, yapısının, kapsamının ve öğrenciler ile paydaşlar için fırsatların kısa bir özetini sunarak öne çıkarır.",
       "codeShare": "Kodunuzu paylaşabileceğiniz ve para kazanabileceğiniz bir platform."
+    },
+    "detailDescriptions": {
+      "wsuppDetail": "Wsupp.co, Bun, Hono ve Svelte ile geliştirilen bir WhatsApp pazarlama otomasyon platformudur. İşletmelerin toplu mesaj kampanyalarını yönetmesini, teslimat analitiğini takip etmesini ve Tailwind CSS ile tasarlanmış hızlı, modern bir arayüz üzerinden müşteri etkileşim iş akışlarını otomatikleştirmesini sağlar.",
+      "pickinDetail": "Pickin.co, backend tarafında Redis ve PostgreSQL, frontend tarafında Next.js ile desteklenen minimalist ve yüksek performanslı bir çekiliş sistemidir. Gerçek zamanlı çekiliş güncellemeleri, güvenli ve şeffaf bir katılım yapısı ile hız ve güvenilirlik için tasarlanmış şık bir modern arayüz sunar.",
+      "doraaiDetail": "DORA AI (Doğumda Risk Analizi), backend tarafında Python ve FastAPI, frontend tarafında Next.js ile geliştirilen yapay zeka destekli bir doğum risk analiz sistemidir. Makine öğrenimi modellerini kullanarak doğum sırasındaki sağlık risklerini tahmin eder ve değerlendirir, tıp profesyonellerinin daha güvenli doğumlar için veriye dayalı kararlar almasına yardımcı olur.",
+      "ticaretIstatistikDetail": "Ticaret İstatistik, İstanbul Ticaret Üniversitesi İstatistik Programını tanıtan bir web projesidir. Next.js ve Tailwind CSS ile oluşturulmuş olup, programın müfredatını, öğretim kadrosunu, araştırma alanlarını ve kariyer fırsatlarını potansiyel öğrenciler ve paydaşlar için temiz, erişilebilir bir formatta sunar.",
+      "codeShareDetail": "Code Share, React.js ve Tailwind CSS ile oluşturulmuş, geliştiricilerin kod parçacıklarını herkese açık olarak paylaşabildiği bir web platformudur. Çeşitli programlama dillerinde kod örneklerini yayınlamak, keşfetmek ve düzenlemek için basit, sezgisel bir arayüz sunar."
+    },
+    "searchPlaceholder": "Proje ara...",
+    "noProjectsFound": "Filtrelerinize uygun proje bulunamadı.",
+    "showingCount": "{total} projeden {count} tanesi gösteriliyor",
+    "relatedProjects": "İlgili Projeler",
+    "projectTimeline": "Proje Zaman Çizelgesi",
+    "timelineStart": "Proje Başladı",
+    "filterByTech": "Teknolojiye göre filtrele",
+    "clearFilters": "Filtreleri temizle",
+    "screenshotGallery": "Ekran Görüntüleri",
+    "imageCounter": "{current} / {total}",
+    "previousImage": "Önceki görsel",
+    "nextImage": "Sonraki görsel",
+    "closeGallery": "Galeriyi kapat",
+    "milestones": {
+      "wsuppMilestone1": "İlk geliştirme ve mimari kurulumu",
+      "wsuppMilestone2": "Mesajlaşma otomasyon motoru tamamlandı",
+      "wsuppMilestone3": "Analitik paneli ve halka açık lansman",
+      "pickinMilestone1": "Backend altyapısı ve veritabanı tasarımı",
+      "pickinMilestone2": "Gerçek zamanlı çekiliş sistemi uygulandı",
+      "pickinMilestone3": "Halka açık beta sürümü",
+      "doraaiMilestone1": "Araştırma aşaması ve veri toplama",
+      "doraaiMilestone2": "ML model eğitimi ve doğrulama",
+      "doraaiMilestone3": "Frontend entegrasyonu ve klinik testler",
+      "ticaretMilestone1": "Proje başlangıcı ve içerik planlaması",
+      "ticaretMilestone2": "Web sitesi lansmanı",
+      "codeshareMilestone1": "Platform geliştirme başladı",
+      "codeshareMilestone2": "Kod paylaşım özellikleriyle halka açık sürüm"
     }
   },
   "Repositories": {
@@ -89,6 +129,21 @@
     "title": "404",
     "message": "Hay aksi! Bu sayfa dijital vahşi doğaya karıştı. Belki efsanevi bir şeyle karşılaştı? Hadi seni doğru yola geri getirelim.",
     "returnHome": "Ana Sayfaya Dön"
+  },
+  "CommandPalette": {
+    "placeholder": "Komut ara...",
+    "navigation": "Gezinme",
+    "actions": "İşlemler",
+    "noResults": "Sonuç bulunamadı.",
+    "toggleDark": "Karanlık Moda Geç",
+    "toggleLight": "Aydınlık Moda Geç",
+    "switchLocale": "Dil Değiştir",
+    "navigate": "Gezin",
+    "select": "Seç"
+  },
+  "Footer": {
+    "cmdkHint": "Komut paletini aç",
+    "rights": "Tüm hakları saklıdır."
   },
   "ThemeToggle": {
     "label": "Tema değiştir"

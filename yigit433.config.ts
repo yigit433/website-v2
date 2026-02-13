@@ -29,7 +29,7 @@ export default {
                 color: "#0077B5",
                 textColor: "#ffffff",
                 name: "LinkedIn",
-                url: "https://www.linkedin.com/in/avcyigitefe/",
+                url: "https://www.linkedin.com/in/yigitefeavci/",
             },
             {
                 icon: "/icons/github.svg",

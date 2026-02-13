@@ -9,6 +9,9 @@
       "description": "More information about Yiğit Efe Avcı. My developer journey, interests, and technical skills.",
       "ogDescription": "A passionate developer working in software, data science, and artificial intelligence.",
       "twitterDescription": "Detailed information about a developer focused on full-stack and AI projects."
+    },
+    "projects": {
+      "suffix": "Project – Yiğit Efe Avcı"
     }
   },
   "Navigation": {
@@ -67,12 +70,49 @@
     "visitSite": "Visit Site",
     "liveDemo": "Live Demo",
     "github": "Github",
+    "backToProjects": "Back to Projects",
+    "aboutProject": "About This Project",
     "descriptions": {
       "wsupp": "WhatsApp marketing automation.",
       "pickin": "A minimalist and fast lottery system. It offers real-time updates, a secure participation structure, and a modern interface.",
       "doraai": "For lives that start tomorrows in health.",
       "ticaretIstatistik": "This project highlights the Istanbul Commerce University Statistics Program, offering a concise overview of its structure, scope, and opportunities for students and stakeholders.",
       "codeShare": "A platform where you can share your code and earn money."
+    },
+    "detailDescriptions": {
+      "wsuppDetail": "Wsupp.co is a WhatsApp marketing automation platform built with Bun, Hono, and Svelte. It enables businesses to manage bulk messaging campaigns, track delivery analytics, and automate customer engagement workflows through a fast, modern interface styled with Tailwind CSS.",
+      "pickinDetail": "Pickin.co is a minimalist and high-performance lottery system powered by Redis and PostgreSQL on the backend with a Next.js frontend. It provides real-time draw updates, a secure and transparent participation structure, and a sleek modern interface designed for speed and reliability.",
+      "doraaiDetail": "DORA AI (Doğumda Risk Analizi) is an AI-powered birth risk analysis system built with Python and FastAPI on the backend and Next.js on the frontend. It uses machine learning models to predict and assess health risks during childbirth, helping medical professionals make data-driven decisions for safer deliveries.",
+      "ticaretIstatistikDetail": "Ticaret İstatistik is a web project showcasing the Istanbul Commerce University Statistics Program. Built with Next.js and Tailwind CSS, it presents the program's curriculum, faculty, research areas, and career opportunities in a clean, accessible format for prospective students and stakeholders.",
+      "codeShareDetail": "Code Share is a web platform built with React.js and Tailwind CSS where developers can share their code snippets publicly. It provides a simple, intuitive interface for publishing, discovering, and organizing code examples across various programming languages."
+    },
+    "searchPlaceholder": "Search projects...",
+    "noProjectsFound": "No projects match your filters.",
+    "showingCount": "Showing {count} of {total} projects",
+    "relatedProjects": "Related Projects",
+    "projectTimeline": "Project Timeline",
+    "timelineStart": "Project Started",
+    "filterByTech": "Filter by technology",
+    "clearFilters": "Clear filters",
+    "screenshotGallery": "Screenshots",
+    "imageCounter": "{current} of {total}",
+    "previousImage": "Previous image",
+    "nextImage": "Next image",
+    "closeGallery": "Close gallery",
+    "milestones": {
+      "wsuppMilestone1": "Initial development and architecture setup",
+      "wsuppMilestone2": "Messaging automation engine completed",
+      "wsuppMilestone3": "Analytics dashboard and public launch",
+      "pickinMilestone1": "Backend infrastructure and database design",
+      "pickinMilestone2": "Real-time draw system implemented",
+      "pickinMilestone3": "Public beta release",
+      "doraaiMilestone1": "Research phase and data collection",
+      "doraaiMilestone2": "ML model training and validation",
+      "doraaiMilestone3": "Frontend integration and clinical testing",
+      "ticaretMilestone1": "Project kickoff and content planning",
+      "ticaretMilestone2": "Website launch",
+      "codeshareMilestone1": "Platform development started",
+      "codeshareMilestone2": "Public release with code sharing features"
     }
   },
   "Repositories": {
@@ -89,6 +129,21 @@
     "title": "404",
     "message": "Oops! This page wandered into the digital wilderness. Maybe it ran into something legendary? Let's get you back on track.",
     "returnHome": "Return to Home"
+  },
+  "CommandPalette": {
+    "placeholder": "Search commands...",
+    "navigation": "Navigation",
+    "actions": "Actions",
+    "noResults": "No results found.",
+    "toggleDark": "Switch to Dark Mode",
+    "toggleLight": "Switch to Light Mode",
+    "switchLocale": "Switch Language",
+    "navigate": "Navigate",
+    "select": "Select"
+  },
+  "Footer": {
+    "cmdkHint": "Open command palette",
+    "rights": "All rights reserved."
   },
   "ThemeToggle": {
     "label": "Toggle theme"

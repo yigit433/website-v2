@@ -9,6 +9,9 @@
       "description": "Më shumë informacion rreth Yiğit Efe Avcı. Udhëtimi im si zhvillues, interesat dhe aftësitë teknike.",
       "ogDescription": "Një zhvillues i apasionuar që punon në fushën e softuerit, shkencës së të dhënave dhe inteligjencës artificiale.",
       "twitterDescription": "Informacion i detajuar rreth një zhvilluesi të fokusuar në projekte full-stack dhe IA."
+    },
+    "projects": {
+      "suffix": "Projekt – Yiğit Efe Avcı"
     }
   },
   "Navigation": {
@@ -67,12 +70,49 @@
     "visitSite": "Vizito Faqen",
     "liveDemo": "Demo Live",
     "github": "Github",
+    "backToProjects": "Kthehu te Projektet",
+    "aboutProject": "Rreth Këtij Projekti",
     "descriptions": {
       "wsupp": "Automatizimi i marketingut në WhatsApp.",
       "pickin": "Një sistem shortesh minimalist dhe i shpejtë. Ofron përditësime në kohë reale, një strukturë pjesëmarrjeje të sigurt dhe një ndërfaqe moderne.",
       "doraai": "Për jetë që fillojnë të nesërmen në shëndet.",
       "ticaretIstatistik": "Ky projekt thekson Programin e Statistikës të Universitetit të Tregtisë të Stambollit, duke ofruar një përmbledhje të shkurtër të strukturës, fushëveprimit dhe mundësive për studentët dhe palët e interesuara.",
       "codeShare": "Një platformë ku mund të ndani kodin tuaj dhe të fitoni para."
+    },
+    "detailDescriptions": {
+      "wsuppDetail": "Wsupp.co është një platformë automatizimi i marketingut në WhatsApp e ndërtuar me Bun, Hono dhe Svelte. Mundëson bizneset të menaxhojnë fushata mesazhesh masive, të ndjekin analitikën e dorëzimit dhe të automatizojnë rrjedhat e punës së angazhimit të klientëve përmes një ndërfaqeje moderne dhe të shpejtë të stilizuar me Tailwind CSS.",
+      "pickinDetail": "Pickin.co është një sistem shortesh minimalist dhe me performancë të lartë i mundësuar nga Redis dhe PostgreSQL në backend me një frontend Next.js. Ofron përditësime të shorteshit në kohë reale, një strukturë pjesëmarrjeje të sigurt dhe transparente, si dhe një ndërfaqe moderne elegante të projektuar për shpejtësi dhe besueshmëri.",
+      "doraaiDetail": "DORA AI (Doğumda Risk Analizi) është një sistem analize të rrezikut të lindjes i mundësuar nga inteligjenca artificiale, i ndërtuar me Python dhe FastAPI në backend dhe Next.js në frontend. Përdor modele të mësimit të makinerisë për të parashikuar dhe vlerësuar rreziqet shëndetësore gjatë lindjes, duke ndihmuar profesionistët mjekësorë të marrin vendime të bazuara në të dhëna për lindje më të sigurta.",
+      "ticaretIstatistikDetail": "Ticaret İstatistik është një projekt ueb që prezanton Programin e Statistikës të Universitetit të Tregtisë të Stambollit. I ndërtuar me Next.js dhe Tailwind CSS, paraqet kurrikulën e programit, stafin akademik, fushat e kërkimit dhe mundësitë e karrierës në një format të pastër dhe të aksesueshëm për studentët e ardhshëm dhe palët e interesuara.",
+      "codeShareDetail": "Code Share është një platformë ueb e ndërtuar me React.js dhe Tailwind CSS ku zhvilluesit mund të ndajnë fragmentet e tyre të kodit publikisht. Ofron një ndërfaqe të thjeshtë dhe intuitive për publikimin, zbulimin dhe organizimin e shembujve të kodit në gjuhë të ndryshme programimi."
+    },
+    "searchPlaceholder": "Kërko projekte...",
+    "noProjectsFound": "Asnjë projekt nuk përputhet me filtrat tuaja.",
+    "showingCount": "Duke shfaqur {count} nga {total} projekte",
+    "relatedProjects": "Projektet e Ngjashme",
+    "projectTimeline": "Kronologjia e Projektit",
+    "timelineStart": "Projekti Filloi",
+    "filterByTech": "Filtro sipas teknologjisë",
+    "clearFilters": "Pastro filtrat",
+    "screenshotGallery": "Pamjet e Ekranit",
+    "imageCounter": "{current} nga {total}",
+    "previousImage": "Imazhi i mëparshëm",
+    "nextImage": "Imazhi tjetër",
+    "closeGallery": "Mbyll galerinë",
+    "milestones": {
+      "wsuppMilestone1": "Zhvillimi fillestar dhe konfigurimi i arkitekturës",
+      "wsuppMilestone2": "Motori i automatizimit të mesazheve u përfundua",
+      "wsuppMilestone3": "Paneli analitik dhe lançimi publik",
+      "pickinMilestone1": "Infrastruktura backend dhe dizajni i bazës së të dhënave",
+      "pickinMilestone2": "Sistemi i shorteshit në kohë reale u implementua",
+      "pickinMilestone3": "Versioni beta publik",
+      "doraaiMilestone1": "Faza e kërkimit dhe mbledhja e të dhënave",
+      "doraaiMilestone2": "Trajnimi dhe vërtetimi i modelit ML",
+      "doraaiMilestone3": "Integrimi i frontend-it dhe testet klinike",
+      "ticaretMilestone1": "Fillimi i projektit dhe planifikimi i përmbajtjes",
+      "ticaretMilestone2": "Lançimi i faqes së internetit",
+      "codeshareMilestone1": "Zhvillimi i platformës filloi",
+      "codeshareMilestone2": "Publikimi publik me veçoritë e ndarjes së kodit"
     }
   },
   "Repositories": {
@@ -89,6 +129,21 @@
     "title": "404",
     "message": "Oops! Kjo faqe u humb në natyrën dixhitale. Ndoshta hasi diçka legjendare? Le t'ju kthejmë në rrugën e duhur.",
     "returnHome": "Kthehu në Ballinë"
+  },
+  "CommandPalette": {
+    "placeholder": "Kërko komanda...",
+    "navigation": "Navigimi",
+    "actions": "Veprimet",
+    "noResults": "Nuk u gjetën rezultate.",
+    "toggleDark": "Kalo në Modalitetin e Errët",
+    "toggleLight": "Kalo në Modalitetin e Ndritshëm",
+    "switchLocale": "Ndrysho Gjuhën",
+    "navigate": "Navigo",
+    "select": "Zgjidh"
+  },
+  "Footer": {
+    "cmdkHint": "Hap paletën e komandave",
+    "rights": "Të gjitha të drejtat e rezervuara."
   },
   "ThemeToggle": {
     "label": "Ndrysho temën"

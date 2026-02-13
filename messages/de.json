@@ -9,6 +9,9 @@
       "description": "Mehr Informationen über Yiğit Efe Avcı. Meine Entwicklerreise, Interessen und technische Fähigkeiten.",
       "ogDescription": "Ein leidenschaftlicher Entwickler in den Bereichen Software, Data Science und künstliche Intelligenz.",
       "twitterDescription": "Detaillierte Informationen über einen Entwickler mit Fokus auf Full-Stack und KI-Projekte."
+    },
+    "projects": {
+      "suffix": "Projekt – Yiğit Efe Avcı"
     }
   },
   "Navigation": {
@@ -67,12 +70,49 @@
     "visitSite": "Website besuchen",
     "liveDemo": "Live-Demo",
     "github": "Github",
+    "backToProjects": "Zurück zu Projekten",
+    "aboutProject": "Über dieses Projekt",
     "descriptions": {
       "wsupp": "WhatsApp-Marketing-Automatisierung.",
       "pickin": "Ein minimalistisches und schnelles Lotteriesystem. Es bietet Echtzeit-Updates, eine sichere Teilnahmestruktur und eine moderne Benutzeroberfläche.",
       "doraai": "Für ein Leben, das morgen gesund beginnt.",
       "ticaretIstatistik": "Dieses Projekt hebt das Statistik-Programm der Istanbul Commerce University hervor und bietet einen prägnanten Überblick über Struktur, Umfang und Möglichkeiten für Studierende und Interessengruppen.",
       "codeShare": "Eine Plattform, auf der Sie Ihren Code teilen und Geld verdienen können."
+    },
+    "detailDescriptions": {
+      "wsuppDetail": "Wsupp.co ist eine WhatsApp-Marketing-Automatisierungsplattform, die mit Bun, Hono und Svelte entwickelt wurde. Sie ermöglicht Unternehmen, Massen-Messaging-Kampagnen zu verwalten, Zustellungsanalysen zu verfolgen und Kundeninteraktions-Workflows über eine schnelle, moderne Oberfläche mit Tailwind CSS zu automatisieren.",
+      "pickinDetail": "Pickin.co ist ein minimalistisches und leistungsstarkes Lotteriesystem, das im Backend auf Redis und PostgreSQL und im Frontend auf Next.js setzt. Es bietet Echtzeit-Ziehungsupdates, eine sichere und transparente Teilnahmestruktur sowie eine elegante moderne Oberfläche, die auf Geschwindigkeit und Zuverlässigkeit ausgelegt ist.",
+      "doraaiDetail": "DORA AI (Doğumda Risk Analizi) ist ein KI-gestütztes Geburtsrisikoanalysesystem, das im Backend mit Python und FastAPI und im Frontend mit Next.js entwickelt wurde. Es nutzt maschinelle Lernmodelle, um Gesundheitsrisiken während der Geburt vorherzusagen und zu bewerten, und hilft medizinischen Fachkräften, datengestützte Entscheidungen für sicherere Entbindungen zu treffen.",
+      "ticaretIstatistikDetail": "Ticaret İstatistik ist ein Webprojekt, das das Statistik-Programm der Istanbul Commerce University präsentiert. Es wurde mit Next.js und Tailwind CSS erstellt und stellt den Lehrplan, das Lehrpersonal, die Forschungsbereiche und Karrieremöglichkeiten in einem übersichtlichen, zugänglichen Format für Studieninteressierte und Stakeholder dar.",
+      "codeShareDetail": "Code Share ist eine mit React.js und Tailwind CSS entwickelte Webplattform, auf der Entwickler ihre Code-Snippets öffentlich teilen können. Sie bietet eine einfache, intuitive Oberfläche zum Veröffentlichen, Entdecken und Organisieren von Codebeispielen in verschiedenen Programmiersprachen."
+    },
+    "searchPlaceholder": "Projekte suchen...",
+    "noProjectsFound": "Keine Projekte entsprechen Ihren Filtern.",
+    "showingCount": "{count} von {total} Projekten werden angezeigt",
+    "relatedProjects": "Verwandte Projekte",
+    "projectTimeline": "Projekt-Zeitachse",
+    "timelineStart": "Projekt gestartet",
+    "filterByTech": "Nach Technologie filtern",
+    "clearFilters": "Filter löschen",
+    "screenshotGallery": "Screenshots",
+    "imageCounter": "{current} von {total}",
+    "previousImage": "Vorheriges Bild",
+    "nextImage": "Nächstes Bild",
+    "closeGallery": "Galerie schließen",
+    "milestones": {
+      "wsuppMilestone1": "Erstentwicklung und Architektur-Setup",
+      "wsuppMilestone2": "Messaging-Automatisierungsmotor fertiggestellt",
+      "wsuppMilestone3": "Analytics-Dashboard und öffentlicher Start",
+      "pickinMilestone1": "Backend-Infrastruktur und Datenbankdesign",
+      "pickinMilestone2": "Echtzeit-Ziehungssystem implementiert",
+      "pickinMilestone3": "Öffentliche Beta-Version",
+      "doraaiMilestone1": "Forschungsphase und Datenerhebung",
+      "doraaiMilestone2": "ML-Modelltraining und Validierung",
+      "doraaiMilestone3": "Frontend-Integration und klinische Tests",
+      "ticaretMilestone1": "Projektstart und Inhaltsplanung",
+      "ticaretMilestone2": "Website-Start",
+      "codeshareMilestone1": "Plattformentwicklung gestartet",
+      "codeshareMilestone2": "Öffentliche Veröffentlichung mit Code-Sharing-Funktionen"
     }
   },
   "Repositories": {
@@ -89,6 +129,21 @@
     "title": "404",
     "message": "Hoppla! Diese Seite hat sich in die digitale Wildnis verirrt. Vielleicht ist sie auf etwas Legendäres gestoßen? Lassen Sie uns Sie wieder auf den richtigen Weg bringen.",
     "returnHome": "Zurück zur Startseite"
+  },
+  "CommandPalette": {
+    "placeholder": "Befehle suchen...",
+    "navigation": "Navigation",
+    "actions": "Aktionen",
+    "noResults": "Keine Ergebnisse gefunden.",
+    "toggleDark": "Dunkelmodus aktivieren",
+    "toggleLight": "Hellmodus aktivieren",
+    "switchLocale": "Sprache wechseln",
+    "navigate": "Navigieren",
+    "select": "Auswählen"
+  },
+  "Footer": {
+    "cmdkHint": "Befehlspalette öffnen",
+    "rights": "Alle Rechte vorbehalten."
   },
   "ThemeToggle": {
     "label": "Thema wechseln"
