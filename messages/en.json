@@ -97,7 +97,9 @@
     "noResults": "No results found.",
     "toggleDark": "Switch to Dark Mode",
     "toggleLight": "Switch to Light Mode",
-    "switchLocale": "Switch Language"
+    "switchLocale": "Switch Language",
+    "navigate": "Navigate",
+    "select": "Select"
   },
   "ThemeToggle": {
     "label": "Toggle theme"

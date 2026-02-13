@@ -97,7 +97,9 @@
     "noResults": "Nuk u gjetën rezultate.",
     "toggleDark": "Kalo në Modalitetin e Errët",
     "toggleLight": "Kalo në Modalitetin e Ndritshëm",
-    "switchLocale": "Ndrysho Gjuhën"
+    "switchLocale": "Ndrysho Gjuhën",
+    "navigate": "Navigo",
+    "select": "Zgjidh"
   },
   "ThemeToggle": {
     "label": "Ndrysho temën"

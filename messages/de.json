@@ -97,7 +97,9 @@
     "noResults": "Keine Ergebnisse gefunden.",
     "toggleDark": "Dunkelmodus aktivieren",
     "toggleLight": "Hellmodus aktivieren",
-    "switchLocale": "Sprache wechseln"
+    "switchLocale": "Sprache wechseln",
+    "navigate": "Navigieren",
+    "select": "Auswählen"
   },
   "ThemeToggle": {
     "label": "Thema wechseln"

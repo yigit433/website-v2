@@ -97,7 +97,9 @@
     "noResults": "Sonuç bulunamadı.",
     "toggleDark": "Karanlık Moda Geç",
     "toggleLight": "Aydınlık Moda Geç",
-    "switchLocale": "Dil Değiştir"
+    "switchLocale": "Dil Değiştir",
+    "navigate": "Gezin",
+    "select": "Seç"
   },
   "ThemeToggle": {
     "label": "Tema değiştir"
