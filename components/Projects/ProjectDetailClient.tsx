@@ -1,14 +1,23 @@
 "use client";
 
+import { useState } from "react";
 import { useTranslations } from "next-intl";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import { Link } from "@/i18n/navigation";
 import { ArrowLeft } from "lucide-react";
 import type { Project } from "@/data/projects";
+import ScreenshotGallery from "./ScreenshotGallery";
+import GalleryLightbox from "./GalleryLightbox";
+import ProjectTimeline from "./ProjectTimeline";
+import RelatedProjects from "./RelatedProjects";
 
 export default function ProjectDetailClient({ project }: { project: Project }) {
   const t = useTranslations("Projects");
+  const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
+
+  const screenshotsToShow =
+    project.screenshots.length > 0 ? project.screenshots : [project.image];
 
   return (
     <section className="py-16 px-4 max-w-4xl mx-auto">
@@ -30,16 +39,25 @@ export default function ProjectDetailClient({ project }: { project: Project }) {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ type: "spring", stiffness: 100, damping: 14, delay: 0.1 }}
-        className="overflow-hidden rounded-xl shadow-lg mb-8"
+        className="mb-8"
       >
-        <Image
-          src={project.image}
-          alt={project.title}
-          width={1200}
-          height={675}
-          className="w-full h-auto object-cover"
+        <ScreenshotGallery
+          screenshots={screenshotsToShow}
+          title={project.title}
+          onOpenLightbox={(index) => setLightboxIndex(index)}
         />
       </motion.div>
+
+      <AnimatePresence>
+        {lightboxIndex !== null && (
+          <GalleryLightbox
+            screenshots={screenshotsToShow}
+            initialIndex={lightboxIndex}
+            title={project.title}
+            onClose={() => setLightboxIndex(null)}
+          />
+        )}
+      </AnimatePresence>
 
       <motion.h1
         initial={{ opacity: 0, y: 20 }}
@@ -81,7 +99,7 @@ export default function ProjectDetailClient({ project }: { project: Project }) {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ type: "spring", stiffness: 100, damping: 14, delay: 0.5 }}
-        className="flex flex-wrap gap-4"
+        className="flex flex-wrap gap-4 mb-12"
       >
         {project.buttons.map((btn) => (
           <motion.a
@@ -96,6 +114,26 @@ export default function ProjectDetailClient({ project }: { project: Project }) {
             {t(btn.nameKey)}
           </motion.a>
         ))}
+      </motion.div>
+
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ type: "spring", stiffness: 100, damping: 14, delay: 0.6 }}
+        className="mb-12"
+      >
+        <ProjectTimeline
+          startDate={project.startDate}
+          milestones={project.milestones}
+        />
+      </motion.div>
+
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ type: "spring", stiffness: 100, damping: 14, delay: 0.7 }}
+      >
+        <RelatedProjects currentSlug={project.slug} />
       </motion.div>
     </section>
   );
