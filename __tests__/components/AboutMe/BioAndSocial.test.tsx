@@ -27,9 +27,10 @@ vi.mock("@/yigit433.config", () => ({
 
 describe("BioAndSocial", () => {
   it("renders bio translation keys", () => {
-    render(<BioAndSocial />);
-    expect(screen.getByText("bio")).toBeInTheDocument();
-    expect(screen.getByText("bio2")).toBeInTheDocument();
+    const { container } = render(<BioAndSocial />);
+    const paragraph = container.querySelector("p");
+    expect(paragraph).toHaveTextContent("bio");
+    expect(paragraph).toHaveTextContent("bio2");
   });
 
   it("renders all social account links", () => {
