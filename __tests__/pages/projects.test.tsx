@@ -57,7 +57,7 @@ describe("ProjectsPage", () => {
     if (imageContainer) {
       await user.click(imageContainer);
       // After clicking, a fullscreen preview should appear
-      expect(screen.getByAlt("Fullscreen Preview")).toBeInTheDocument();
+      expect(screen.getByAltText("Fullscreen Preview")).toBeInTheDocument();
     }
   });
 
@@ -71,14 +71,14 @@ describe("ProjectsPage", () => {
 
     if (imageContainer) {
       await user.click(imageContainer);
-      expect(screen.getByAlt("Fullscreen Preview")).toBeInTheDocument();
+      expect(screen.getByAltText("Fullscreen Preview")).toBeInTheDocument();
 
       // Close the overlay by clicking on it
-      const overlay = screen.getByAlt("Fullscreen Preview").closest(".cursor-zoom-out");
+      const overlay = screen.getByAltText("Fullscreen Preview").closest(".cursor-zoom-out");
       if (overlay) {
         await user.click(overlay);
         expect(
-          screen.queryByAlt("Fullscreen Preview")
+          screen.queryByAltText("Fullscreen Preview")
         ).not.toBeInTheDocument();
       }
     }
