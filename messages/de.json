@@ -1,0 +1,118 @@
+{
+  "Metadata": {
+    "home": {
+      "title": "Yigit433 Portfolio",
+      "description": "Ein Portfolio, das meine Träume durch Code erzählt"
+    },
+    "aboutMe": {
+      "title": "Über mich – Yiğit Efe Avcı",
+      "description": "Mehr Informationen über Yiğit Efe Avcı. Meine Entwicklerreise, Interessen und technische Fähigkeiten.",
+      "ogDescription": "Ein leidenschaftlicher Entwickler in den Bereichen Software, Data Science und künstliche Intelligenz.",
+      "twitterDescription": "Detaillierte Informationen über einen Entwickler mit Fokus auf Full-Stack und KI-Projekte."
+    }
+  },
+  "Navigation": {
+    "home": "Startseite",
+    "aboutMe": "Über mich",
+    "projects": "Projekte",
+    "repositories": "Repositories"
+  },
+  "Home": {
+    "selfTaught": "Autodidakt",
+    "techStackTitle": "Technologie-Stack",
+    "techStackDescription": "Kerntechnologien, auf die ich während des gesamten Design-, Entwicklungs- und Bereitstellungszyklus setze."
+  },
+  "Config": {
+    "position": "Full-Stack-Entwickler",
+    "description": "Hallo 👋, ich bin Student. Ich bin jetzt {age} Jahre alt und habe einige kleine Projekte. Ich verbringe mehr Zeit mit meinen Projekten und Radfahren als mit Vorlesungen."
+  },
+  "Education": {
+    "title": "Bildungsweg",
+    "items": {
+      "university": {
+        "school": "Istanbul Ticaret Universität",
+        "degree": "Bachelor in Statistik",
+        "date": "2023 - Heute",
+        "description": "Ich habe mich auf Wahrscheinlichkeitstheorie, Datenanalyse und Regressionsmodellierung konzentriert. Ich arbeite mit statistischen Tools wie R, SPSS und Python, um datengesteuerte Erkenntnisse zu gewinnen."
+      },
+      "highSchool": {
+        "school": "Ihsan Mermerci Anatolisches Gymnasium",
+        "degree": "Gymnasium",
+        "date": "2018 - 2022",
+        "description": "Schwerpunkt Mathematik und Naturwissenschaften"
+      }
+    },
+    "current": "Heute"
+  },
+  "AboutMe": {
+    "title": "Über mich",
+    "techStackTitle": "Technologie-Stack",
+    "bio": "Ich bin ein Statistik-Student mit starkem Interesse an Data Science, Softwareentwicklung und statistischer Modellierung. Ich bin darauf spezialisiert, Daten mit Tools wie Python, R und SPSS in umsetzbare Erkenntnisse umzuwandeln.",
+    "bio2": "Mein technischer Fokus erstreckt sich auf Full-Stack-Entwicklung, wo ich Technologien wie React, Next.js, Go und PostgreSQL nutze, um skalierbare, effiziente und benutzerorientierte Webanwendungen zu erstellen.",
+    "details": {
+      "location": "Standort",
+      "locationValue": "Türkiye",
+      "education": "Bildung",
+      "educationValue": "B.Sc. in Statistik",
+      "backendStack": "Backend-Stack",
+      "backendStackValue": "GoLang, PostgreSQL, Drizzle",
+      "frontendStack": "Frontend-Stack",
+      "frontendStackValue": "Next.js, React, Tailwind CSS",
+      "focusAreas": "Schwerpunkte",
+      "focusAreasValue": "CI/CD, Datenmodellierung, Statistische Berechnung"
+    }
+  },
+  "Projects": {
+    "title": "Projekte",
+    "visitSite": "Website besuchen",
+    "liveDemo": "Live-Demo",
+    "github": "Github",
+    "descriptions": {
+      "wsupp": "WhatsApp-Marketing-Automatisierung.",
+      "pickin": "Ein minimalistisches und schnelles Lotteriesystem. Es bietet Echtzeit-Updates, eine sichere Teilnahmestruktur und eine moderne Benutzeroberfläche.",
+      "doraai": "Für ein Leben, das morgen gesund beginnt.",
+      "ticaretIstatistik": "Dieses Projekt hebt das Statistik-Programm der Istanbul Commerce University hervor und bietet einen prägnanten Überblick über Struktur, Umfang und Möglichkeiten für Studierende und Interessengruppen.",
+      "codeShare": "Eine Plattform, auf der Sie Ihren Code teilen und Geld verdienen können."
+    }
+  },
+  "Repositories": {
+    "title": "Repositories",
+    "loading": "Repositories werden geladen...",
+    "error": "Repositories konnten nicht geladen werden.",
+    "noDescription": "Keine Beschreibung angegeben.",
+    "unknown": "Unbekannt",
+    "portfolio": "Portfolio",
+    "oldVersion": "ALTE VERSION",
+    "archived": "ARCHIVIERT"
+  },
+  "NotFound": {
+    "title": "404",
+    "message": "Hoppla! Diese Seite hat sich in die digitale Wildnis verirrt. Vielleicht ist sie auf etwas Legendäres gestoßen? Lassen Sie uns Sie wieder auf den richtigen Weg bringen.",
+    "returnHome": "Zurück zur Startseite"
+  },
+  "ThemeToggle": {
+    "label": "Thema wechseln"
+  },
+  "TechStack": {
+    "framerMotion": "Leistungsstarke Animationsbibliothek für React und moderne UIs.",
+    "react": "UI-Bibliothek zum Erstellen von Benutzeroberflächen.",
+    "nextjs": "Fullstack-Framework für moderne React-Apps.",
+    "tailwindcss": "Utility-First-CSS-Framework für schnelle UI-Entwicklung.",
+    "typescript": "Typisierte Obermenge von JavaScript.",
+    "golang": "Kompilierte Sprache für Backend und Systeme.",
+    "flutter": "Plattformübergreifendes UI-Toolkit zum Erstellen von Apps mit Dart.",
+    "supabase": "Open-Source-Firebase-Alternative mit Postgres.",
+    "docker": "Container-Plattform zum Erstellen und Bereitstellen von Anwendungen.",
+    "drizzle": "Leichtgewichtiges und typsicheres ORM für TypeScript.",
+    "mongodb": "NoSQL-Datenbank für JSON-ähnliche Dokumente mit hohem Volumen.",
+    "postgresql": "Fortgeschrittene relationale Open-Source-Datenbank mit SQL-Unterstützung.",
+    "tensorflow": "Bibliothek für maschinelles Lernen.",
+    "pytorch": "Deep-Learning-Framework.",
+    "python": "Allzweck-Programmiersprache.",
+    "pandas": "Datenmanipulationsbibliothek für Python.",
+    "scikitlearn": "Maschinelles Lernen in Python.",
+    "jupyter": "Interaktive Notebooks für Python und Data Science.",
+    "opencv": "Computer-Vision-Bibliothek.",
+    "r": "Sprache für statistische Berechnung und Grafiken."
+  }
+}

@@ -1,28 +1,26 @@
 import { describe, it, expect } from "vitest";
 import { render, screen } from "@testing-library/react";
-import NotFoundPage from "@/app/not-found";
+import NotFoundPage from "@/app/[locale]/not-found";
 
 describe("NotFoundPage", () => {
-  it("renders 404 text", () => {
+  it("renders 404 translation key", () => {
     render(<NotFoundPage />);
-    expect(screen.getByText("404")).toBeInTheDocument();
+    expect(screen.getByText("title")).toBeInTheDocument();
   });
 
-  it("renders error message", () => {
+  it("renders error message translation key", () => {
     render(<NotFoundPage />);
-    expect(
-      screen.getByText(/This page wandered into the digital wilderness/)
-    ).toBeInTheDocument();
+    expect(screen.getByText("message")).toBeInTheDocument();
   });
 
-  it("renders return to home link", () => {
+  it("renders return to home translation key", () => {
     render(<NotFoundPage />);
-    expect(screen.getByText("Return to Home")).toBeInTheDocument();
+    expect(screen.getByText("returnHome")).toBeInTheDocument();
   });
 
   it("has a link pointing to home", () => {
     render(<NotFoundPage />);
-    const link = screen.getByText("Return to Home").closest("a");
+    const link = screen.getByText("returnHome").closest("a");
     expect(link).toHaveAttribute("href", "/");
   });
 });

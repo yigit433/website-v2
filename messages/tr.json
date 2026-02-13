@@ -1,0 +1,118 @@
+{
+  "Metadata": {
+    "home": {
+      "title": "Yigit433 Portfolyo",
+      "description": "Hayallerimi kodla anlatan portfolyo"
+    },
+    "aboutMe": {
+      "title": "Hakkımda – Yiğit Efe Avcı",
+      "description": "Yiğit Efe Avcı hakkında daha fazla bilgi. Geliştirici yolculuğum, ilgi alanlarım ve teknik becerilerim.",
+      "ogDescription": "Yazılım, veri bilimi ve yapay zeka alanlarında çalışan tutkulu bir geliştirici.",
+      "twitterDescription": "Full-stack ve yapay zeka projelerine odaklanan bir geliştirici hakkında detaylı bilgi."
+    }
+  },
+  "Navigation": {
+    "home": "Ana Sayfa",
+    "aboutMe": "Hakkımda",
+    "projects": "Projeler",
+    "repositories": "Depolar"
+  },
+  "Home": {
+    "selfTaught": "Otodidakt",
+    "techStackTitle": "Teknoloji Yığını",
+    "techStackDescription": "Tasarım, geliştirme ve dağıtım yaşam döngüsü boyunca güvendiğim temel teknolojiler."
+  },
+  "Config": {
+    "position": "Full-stack Geliştirici",
+    "description": "Merhaba 👋, Ben bir öğrenciyim. Şu an {age} yaşındayım ve bazı küçük projelerim var. Derslerden daha fazla zamanımı projelerime ve bisiklet sürmeye harcıyorum."
+  },
+  "Education": {
+    "title": "Eğitim Hayatı",
+    "items": {
+      "university": {
+        "school": "İstanbul Ticaret Üniversitesi",
+        "degree": "İstatistik Lisans",
+        "date": "2023 - Devam Ediyor",
+        "description": "Olasılık teorisi, veri analizi ve regresyon modelleme üzerine yoğunlaştım. R, SPSS ve Python gibi istatistiksel araçlarla veriye dayalı içgörüler üretiyorum."
+      },
+      "highSchool": {
+        "school": "İhsan Mermerci Anadolu Lisesi",
+        "degree": "Lise",
+        "date": "2018 - 2022",
+        "description": "Matematik ve Fen Bilimlerine odaklanma"
+      }
+    },
+    "current": "Devam Ediyor"
+  },
+  "AboutMe": {
+    "title": "Hakkımda",
+    "techStackTitle": "Teknoloji Yığını",
+    "bio": "Veri bilimi, yazılım geliştirme ve istatistiksel modelleme alanlarında güçlü bir ilgiye sahip istatistik lisans öğrencisiyim. Python, R ve SPSS gibi araçları kullanarak verileri eyleme dönüştürülebilir içgörülere dönüştürme konusunda uzmanlaşıyorum.",
+    "bio2": "Teknik odağım, React, Next.js, Go ve PostgreSQL gibi teknolojileri kullanarak ölçeklenebilir, verimli ve kullanıcı odaklı web uygulamaları oluşturduğum full-stack geliştirmeye uzanıyor.",
+    "details": {
+      "location": "Konum",
+      "locationValue": "Türkiye",
+      "education": "Eğitim",
+      "educationValue": "İstatistik Lisans",
+      "backendStack": "Backend Yığını",
+      "backendStackValue": "GoLang, PostgreSQL, Drizzle",
+      "frontendStack": "Frontend Yığını",
+      "frontendStackValue": "Next.js, React, Tailwind CSS",
+      "focusAreas": "Odak Alanları",
+      "focusAreasValue": "CI/CD, Veri Modelleme, İstatistiksel Hesaplama"
+    }
+  },
+  "Projects": {
+    "title": "Projeler",
+    "visitSite": "Siteyi Ziyaret Et",
+    "liveDemo": "Canlı Demo",
+    "github": "Github",
+    "descriptions": {
+      "wsupp": "WhatsApp pazarlama otomasyonu.",
+      "pickin": "Minimalist ve hızlı bir çekiliş sistemi. Gerçek zamanlı güncellemeler, güvenli bir katılım yapısı ve modern bir arayüz sunar.",
+      "doraai": "Sağlıkta yarınlara başlayan hayatlar için.",
+      "ticaretIstatistik": "Bu proje, İstanbul Ticaret Üniversitesi İstatistik Programını, yapısının, kapsamının ve öğrenciler ile paydaşlar için fırsatların kısa bir özetini sunarak öne çıkarır.",
+      "codeShare": "Kodunuzu paylaşabileceğiniz ve para kazanabileceğiniz bir platform."
+    }
+  },
+  "Repositories": {
+    "title": "Depolar",
+    "loading": "Depolar yükleniyor...",
+    "error": "Depolar yüklenemedi.",
+    "noDescription": "Açıklama belirtilmedi.",
+    "unknown": "Bilinmiyor",
+    "portfolio": "Portfolyo",
+    "oldVersion": "ESKİ SÜRÜM",
+    "archived": "ARŞİVLENDİ"
+  },
+  "NotFound": {
+    "title": "404",
+    "message": "Hay aksi! Bu sayfa dijital vahşi doğaya karıştı. Belki efsanevi bir şeyle karşılaştı? Hadi seni doğru yola geri getirelim.",
+    "returnHome": "Ana Sayfaya Dön"
+  },
+  "ThemeToggle": {
+    "label": "Tema değiştir"
+  },
+  "TechStack": {
+    "framerMotion": "React için güçlü animasyon kütüphanesi.",
+    "react": "Kullanıcı arayüzleri oluşturmak için UI kütüphanesi.",
+    "nextjs": "Modern React uygulamaları için fullstack framework.",
+    "tailwindcss": "Hızlı UI geliştirme için utility-first CSS framework.",
+    "typescript": "JavaScript'in tipli üst kümesi.",
+    "golang": "Backend ve sistemler için derlenen dil.",
+    "flutter": "Dart ile uygulama oluşturmak için cross-platform UI toolkit.",
+    "supabase": "Postgres ile açık kaynaklı Firebase alternatifi.",
+    "docker": "Uygulama oluşturma ve dağıtım için konteyner platformu.",
+    "drizzle": "TypeScript için hafif ve tip güvenli ORM.",
+    "mongodb": "Yüksek hacimli JSON-benzeri belgeler için tasarlanmış NoSQL veritabanı.",
+    "postgresql": "SQL destekli gelişmiş açık kaynaklı ilişkisel veritabanı.",
+    "tensorflow": "Makine öğrenimi kütüphanesi.",
+    "pytorch": "Derin öğrenme framework'ü.",
+    "python": "Genel amaçlı programlama dili.",
+    "pandas": "Python için veri işleme kütüphanesi.",
+    "scikitlearn": "Python'da makine öğrenimi.",
+    "jupyter": "Python ve veri bilimi için interaktif notebooklar.",
+    "opencv": "Bilgisayar görüşü kütüphanesi.",
+    "r": "İstatistiksel hesaplama ve grafik dili."
+  }
+}

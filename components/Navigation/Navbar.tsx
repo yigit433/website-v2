@@ -1,7 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { usePathname, useRouter } from "next/navigation";
+import { useTranslations } from "next-intl";
+import { usePathname, useRouter } from "@/i18n/navigation";
 import { AnimatePresence } from "framer-motion";
 
 import Config from "../../yigit433.config";
@@ -11,8 +12,16 @@ import ToggleButton from "./ToggleButton";
 
 const Navbar = () => {
   const [mobNavOpen, setMobNavOpen] = useState(false);
+  const t = useTranslations("Navigation");
   const router = useRouter();
   const pathname = usePathname();
+
+  const routes = [
+    { name: t("home"), to: "/" },
+    { name: t("aboutMe"), to: "/about-me" },
+    { name: t("projects"), to: "/projects" },
+    { name: t("repositories"), to: "/repositories" },
+  ];
 
   return (
     <nav className="fixed top-0 left-0 w-full z-50 backdrop-blur-xl shadow-md px-6 py-3 lg:px-8 flex justify-between items-center">
@@ -21,7 +30,7 @@ const Navbar = () => {
       </h1>
 
       <DesktopMenu
-        routes={Config.routes}
+        routes={routes}
         currentPath={pathname}
         router={router}
       />
@@ -34,7 +43,7 @@ const Navbar = () => {
       <AnimatePresence>
         {mobNavOpen && (
           <MobileMenu
-            routes={Config.routes}
+            routes={routes}
             currentPath={pathname}
             closeMenu={() => setMobNavOpen(false)}
             router={router}

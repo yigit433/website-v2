@@ -1,32 +1,36 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 
-const techStack = [
-    { name: "Framer Motion", icon: "/icons/framer-motion.svg", description: "Animation library for React." },
-    { name: "React", icon: "/icons/react.svg", description: "Library for building interactive UIs." },
-    { name: "Next.js", icon: "/icons/nextjs.svg", description: "Fullstack React framework." },
-    { name: "Tailwind CSS", icon: "/icons/tailwindcss.svg", description: "Utility-first CSS framework." },
-    { name: "TypeScript", icon: "/icons/typescript.svg", description: "Statically typed JavaScript." },
-    { name: "GoLang", icon: "/icons/golang.svg", description: "Compiled backend language." },
-    { name: "Flutter", icon: "/icons/flutter.svg", description: "UI toolkit for cross-platform apps." },
-    { name: "Supabase", icon: "/icons/supabase.svg", description: "Open-source Firebase alternative." },
-    { name: "Docker", icon: "/icons/docker.svg", description: "Containerization platform." },
-    { name: "Prisma", icon: "/icons/prisma.svg", description: "ORM for TypeScript and SQL." },
-    { name: "MongoDB", icon: "/icons/mongodb.svg", description: "NoSQL database." },
-    { name: "PostgreSQL", icon: "/icons/postgresql.svg", description: "Relational SQL database." },
-    { name: "TensorFlow", icon: "/icons/tensorflow.svg", description: "Machine learning library." },
-    { name: "PyTorch", icon: "/icons/pytorch.svg", description: "Deep learning framework." },
-    { name: "Python", icon: "/icons/python.svg", description: "General-purpose programming language." },
-    { name: "Pandas", icon: "/icons/pandas.svg", description: "Data manipulation library for Python." },
-    { name: "Scikit-learn", icon: "/icons/scikit-learn.svg", description: "Machine learning in Python." },
-    { name: "Jupyter", icon: "/icons/jupyter.svg", description: "Interactive notebooks for Python and data science." },
-    { name: "OpenCV", icon: "/icons/opencv.svg", description: "Computer vision library." },
-    { name: "R", icon: "/icons/rlang.svg", description: "Statistical computing and graphics language." }
+const techStackItems = [
+    { name: "Framer Motion", icon: "/icons/framer-motion.svg", key: "framerMotion" },
+    { name: "React", icon: "/icons/react.svg", key: "react" },
+    { name: "Next.js", icon: "/icons/nextjs.svg", key: "nextjs" },
+    { name: "Tailwind CSS", icon: "/icons/tailwindcss.svg", key: "tailwindcss" },
+    { name: "TypeScript", icon: "/icons/typescript.svg", key: "typescript" },
+    { name: "GoLang", icon: "/icons/golang.svg", key: "golang" },
+    { name: "Flutter", icon: "/icons/flutter.svg", key: "flutter" },
+    { name: "Supabase", icon: "/icons/supabase.svg", key: "supabase" },
+    { name: "Docker", icon: "/icons/docker.svg", key: "docker" },
+    { name: "Drizzle", icon: "/icons/drizzle.svg", key: "drizzle" },
+    { name: "MongoDB", icon: "/icons/mongodb.svg", key: "mongodb" },
+    { name: "PostgreSQL", icon: "/icons/postgresql.svg", key: "postgresql" },
+    { name: "TensorFlow", icon: "/icons/tensorflow.svg", key: "tensorflow" },
+    { name: "PyTorch", icon: "/icons/pytorch.svg", key: "pytorch" },
+    { name: "Python", icon: "/icons/python.svg", key: "python" },
+    { name: "Pandas", icon: "/icons/pandas.svg", key: "pandas" },
+    { name: "Scikit-learn", icon: "/icons/scikit-learn.svg", key: "scikitlearn" },
+    { name: "Jupyter", icon: "/icons/jupyter.svg", key: "jupyter" },
+    { name: "OpenCV", icon: "/icons/opencv.svg", key: "opencv" },
+    { name: "R", icon: "/icons/rlang.svg", key: "r" },
 ];
 
 export default function TechStack() {
+  const t = useTranslations("TechStack");
+  const tAbout = useTranslations("AboutMe");
+
   return (
     <>
       <motion.h3
@@ -36,11 +40,11 @@ export default function TechStack() {
         viewport={{ once: true }}
         className="text-2xl font-bold mb-6 text-center text-gradient-animated"
       >
-        Technology Stack
+        {tAbout("techStackTitle")}
       </motion.h3>
 
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 mb-16">
-        {techStack.map((tech, index) => (
+        {techStackItems.map((tech, index) => (
           <motion.div
             key={index}
             initial={{ opacity: 0, y: 30 }}
@@ -58,7 +62,7 @@ export default function TechStack() {
               className="mb-2 w-10 h-10"
             />
             <h4 className="font-semibold">{tech.name}</h4>
-            <p className="text-sm opacity-70 mt-1">{tech.description}</p>
+            <p className="text-sm opacity-70 mt-1">{t(tech.key)}</p>
           </motion.div>
         ))}
       </div>

@@ -1,12 +1,14 @@
 "use client";
 
 import { useTheme } from "next-themes";
+import { useTranslations } from "next-intl";
 import { Sun, Moon } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
 
 const ThemeToggle = () => {
   const { theme, setTheme } = useTheme();
+  const t = useTranslations("ThemeToggle");
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
@@ -32,7 +34,7 @@ const ThemeToggle = () => {
     <button
       onClick={toggleTheme}
       className="relative w-10 h-10 flex items-center justify-center rounded-full bg-muted hover:scale-105 transition-transform shadow-md"
-      aria-label="Tema değiştir"
+      aria-label={t("label")}
     >
       <AnimatePresence mode="wait" initial={false}>
         <motion.div

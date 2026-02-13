@@ -26,11 +26,11 @@ vi.mock("@/yigit433.config", () => ({
 }));
 
 describe("BioAndSocial", () => {
-  it("renders bio paragraph", () => {
-    render(<BioAndSocial />);
-    expect(
-      screen.getByText(/statistics undergraduate/)
-    ).toBeInTheDocument();
+  it("renders bio translation keys", () => {
+    const { container } = render(<BioAndSocial />);
+    const paragraph = container.querySelector("p");
+    expect(paragraph).toHaveTextContent("bio");
+    expect(paragraph).toHaveTextContent("bio2");
   });
 
   it("renders all social account links", () => {

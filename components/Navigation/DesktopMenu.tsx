@@ -1,11 +1,11 @@
-import { useRouter } from "next/navigation";
 import NavItem from "./NavItem";
-import ThemeButton from "./ThemeToggle"
+import ThemeButton from "./ThemeToggle";
+import LocaleSwitcher from "./LocaleSwitcher";
 
 type Props = {
   routes: { name: string; to: string }[];
   currentPath: string;
-  router: ReturnType<typeof useRouter>;
+  router: { push: (href: string) => void };
 };
 
 const DesktopMenu = ({ routes, currentPath, router }: Props) => (
@@ -13,6 +13,7 @@ const DesktopMenu = ({ routes, currentPath, router }: Props) => (
     {routes.map((route, i) => (
       <NavItem key={i} route={route} isActive={currentPath === route.to} router={router} />
     ))}
+    <LocaleSwitcher />
     <ThemeButton />
   </ul>
 );

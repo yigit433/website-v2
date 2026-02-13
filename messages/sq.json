@@ -1,0 +1,118 @@
+{
+  "Metadata": {
+    "home": {
+      "title": "Yigit433 Portofoli",
+      "description": "Një portofol që tregon ëndrrat e mia përmes kodit"
+    },
+    "aboutMe": {
+      "title": "Rreth Meje – Yiğit Efe Avcı",
+      "description": "Më shumë informacion rreth Yiğit Efe Avcı. Udhëtimi im si zhvillues, interesat dhe aftësitë teknike.",
+      "ogDescription": "Një zhvillues i apasionuar që punon në fushën e softuerit, shkencës së të dhënave dhe inteligjencës artificiale.",
+      "twitterDescription": "Informacion i detajuar rreth një zhvilluesi të fokusuar në projekte full-stack dhe IA."
+    }
+  },
+  "Navigation": {
+    "home": "Ballina",
+    "aboutMe": "Rreth Meje",
+    "projects": "Projektet",
+    "repositories": "Depot"
+  },
+  "Home": {
+    "selfTaught": "Vetëmësuar",
+    "techStackTitle": "Teknologjitë",
+    "techStackDescription": "Teknologjitë kryesore që përdor gjatë gjithë ciklit të dizajnit, zhvillimit dhe shpërndarjes."
+  },
+  "Config": {
+    "position": "Zhvillues Full-stack",
+    "description": "Përshëndetje 👋, Unë jam student. Aktualisht jam {age} vjeç dhe kam disa projekte të vogla. Kaloj më shumë kohë me projektet e mia dhe çiklizmin sesa me mësimet."
+  },
+  "Education": {
+    "title": "Arsimi",
+    "items": {
+      "university": {
+        "school": "Universiteti i Tregtisë i Stambollit",
+        "degree": "Bachelor në Statistikë",
+        "date": "2023 - Aktualisht",
+        "description": "U fokusova në teorinë e probabilitetit, analizën e të dhënave dhe modelimin e regresionit. Punoj me mjete statistikore si R, SPSS dhe Python për të prodhuar njohuri të bazuara në të dhëna."
+      },
+      "highSchool": {
+        "school": "Gjimnazi Anadollak Ihsan Mermerci",
+        "degree": "Gjimnaz",
+        "date": "2018 - 2022",
+        "description": "Fokus në Matematikë dhe Shkenca Natyrore"
+      }
+    },
+    "current": "Aktualisht"
+  },
+  "AboutMe": {
+    "title": "Rreth Meje",
+    "techStackTitle": "Teknologjitë",
+    "bio": "Jam student i statistikës me interes të fortë në shkencën e të dhënave, zhvillimin e softuerit dhe modelimin statistikor. Jam i specializuar në transformimin e të dhënave në njohuri të zbatueshme duke përdorur mjete si Python, R dhe SPSS.",
+    "bio2": "Fokusi im teknik shtrihet në zhvillimin full-stack, ku përdor teknologji si React, Next.js, Go dhe PostgreSQL për të ndërtuar aplikacione ueb të shkallëzueshme, efikase dhe të orientuara nga përdoruesi.",
+    "details": {
+      "location": "Vendndodhja",
+      "locationValue": "Türkiye",
+      "education": "Arsimi",
+      "educationValue": "Bachelor në Statistikë",
+      "backendStack": "Backend Stack",
+      "backendStackValue": "GoLang, PostgreSQL, Drizzle",
+      "frontendStack": "Frontend Stack",
+      "frontendStackValue": "Next.js, React, Tailwind CSS",
+      "focusAreas": "Fushat e Fokusit",
+      "focusAreasValue": "CI/CD, Modelimi i të Dhënave, Llogaritja Statistikore"
+    }
+  },
+  "Projects": {
+    "title": "Projektet",
+    "visitSite": "Vizito Faqen",
+    "liveDemo": "Demo Live",
+    "github": "Github",
+    "descriptions": {
+      "wsupp": "Automatizimi i marketingut në WhatsApp.",
+      "pickin": "Një sistem shortesh minimalist dhe i shpejtë. Ofron përditësime në kohë reale, një strukturë pjesëmarrjeje të sigurt dhe një ndërfaqe moderne.",
+      "doraai": "Për jetë që fillojnë të nesërmen në shëndet.",
+      "ticaretIstatistik": "Ky projekt thekson Programin e Statistikës të Universitetit të Tregtisë të Stambollit, duke ofruar një përmbledhje të shkurtër të strukturës, fushëveprimit dhe mundësive për studentët dhe palët e interesuara.",
+      "codeShare": "Një platformë ku mund të ndani kodin tuaj dhe të fitoni para."
+    }
+  },
+  "Repositories": {
+    "title": "Depot",
+    "loading": "Po ngarkohen depot...",
+    "error": "Depot nuk u ngarkuan.",
+    "noDescription": "Nuk ka përshkrim.",
+    "unknown": "E panjohur",
+    "portfolio": "Portofoli",
+    "oldVersion": "VERSION I VJETËR",
+    "archived": "ARKIVUAR"
+  },
+  "NotFound": {
+    "title": "404",
+    "message": "Oops! Kjo faqe u humb në natyrën dixhitale. Ndoshta hasi diçka legjendare? Le t'ju kthejmë në rrugën e duhur.",
+    "returnHome": "Kthehu në Ballinë"
+  },
+  "ThemeToggle": {
+    "label": "Ndrysho temën"
+  },
+  "TechStack": {
+    "framerMotion": "Bibliotekë e fuqishme animacionesh për React.",
+    "react": "Bibliotekë UI për ndërtimin e ndërfaqeve të përdoruesit.",
+    "nextjs": "Framework fullstack për aplikacione moderne React.",
+    "tailwindcss": "Framework CSS utility-first për zhvillim të shpejtë UI.",
+    "typescript": "Superset i tipizuar i JavaScript.",
+    "golang": "Gjuhë e kompiluar për backend dhe sisteme.",
+    "flutter": "Toolkit UI cross-platform për ndërtimin e aplikacioneve me Dart.",
+    "supabase": "Alternativë Firebase me burim të hapur me Postgres.",
+    "docker": "Platformë kontejnerësh për ndërtimin dhe shpërndarjen e aplikacioneve.",
+    "drizzle": "ORM e lehtë dhe e sigurt në tipe për TypeScript.",
+    "mongodb": "Bazë të dhënash NoSQL për dokumente JSON me volum të lartë.",
+    "postgresql": "Bazë të dhënash relacionale e avancuar me burim të hapur me mbështetje SQL.",
+    "tensorflow": "Bibliotekë për mësimin e makinerisë.",
+    "pytorch": "Framework për mësimin e thellë.",
+    "python": "Gjuhë programimi me përdorim të përgjithshëm.",
+    "pandas": "Bibliotekë manipulimi të dhënash për Python.",
+    "scikitlearn": "Mësimi i makinerisë në Python.",
+    "jupyter": "Fletore interaktive për Python dhe shkencën e të dhënave.",
+    "opencv": "Bibliotekë për vizionin kompjuterik.",
+    "r": "Gjuhë për llogaritje statistikore dhe grafikë."
+  }
+}

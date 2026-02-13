@@ -1,5 +1,6 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 import useSWR from "swr";
 
@@ -17,6 +18,7 @@ interface GitHubRepo {
 const fetcher = (url: string) => fetch(url).then((res) => res.json());
 
 export default function RepositoriesPage() {
+    const t = useTranslations("Repositories");
     const { data, error, isLoading } = useSWR(
         "https://api.github.com/users/yigit433/repos",
         fetcher
@@ -31,7 +33,7 @@ export default function RepositoriesPage() {
                     transition={{ duration: 0.5 }}
                     className="text-xl font-semibold text-[color:var(--foreground)]"
                 >
-                    Loading repositories...
+                    {t("loading")}
                 </motion.div>
             </section>
         );
@@ -46,7 +48,7 @@ export default function RepositoriesPage() {
                     transition={{ duration: 0.5 }}
                     className="text-xl font-semibold text-red-500"
                 >
-                    Failed to load repositories.
+                    {t("error")}
                 </motion.div>
             </section>
         );
@@ -61,7 +63,7 @@ export default function RepositoriesPage() {
                 viewport={{ once: true }}
                 className="text-4xl font-bold mb-12 text-center text-gradient-animated"
             >
-                Repositories
+                {t("title")}
             </motion.h2>
 
             <div className="grid md:grid-cols-2 gap-6">
@@ -91,27 +93,27 @@ export default function RepositoriesPage() {
                         >
                             {isPortfolio && (
                                 <div className="absolute top-3 right-3 bg-yellow-300 text-black text-[10px] font-bold px-2 py-1 rounded-full uppercase shadow-sm">
-                                    Portfolio
+                                    {t("portfolio")}
                                 </div>
                             )}
                             {isOldPortfolio && (
                                 <div className="absolute top-3 right-3 bg-gray-400 text-white text-[10px] font-semibold px-2 py-1 rounded-full uppercase shadow-sm">
-                                    OLD VERSION
+                                    {t("oldVersion")}
                                 </div>
                             )}
                             {isArchived && (
                                 <div className="absolute top-3 left-3 bg-red-400 text-white text-[10px] font-semibold px-2 py-1 rounded-full uppercase shadow-sm">
-                                    ARCHIVED
+                                    {t("archived")}
                                 </div>
                             )}
 
                             <div>
                                 <h3 className="text-lg font-semibold mb-1">{repo.name}</h3>
-                                <p className="text-sm opacity-80 mb-3">{repo.description || "No description provided."}</p>
+                                <p className="text-sm opacity-80 mb-3">{repo.description || t("noDescription")}</p>
                             </div>
 
                             <div className="flex justify-between items-center text-xs font-medium">
-                                <span className="opacity-70">{repo.language || "Unknown"}</span>
+                                <span className="opacity-70">{repo.language || t("unknown")}</span>
                                 <span className="opacity-70">⭐ {repo.stargazers_count}</span>
                             </div>
                         </motion.a>

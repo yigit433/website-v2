@@ -1,8 +1,11 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import { motion } from 'framer-motion';
 
 export default function AboutHeader() {
+  const t = useTranslations("AboutMe");
+
   return (
     <motion.h2
       initial={{ opacity: 0, y: -20 }}
@@ -11,7 +14,7 @@ export default function AboutHeader() {
       viewport={{ once: true }}
       className="text-4xl font-bold mb-2 text-center text-gradient-animated"
     >
-      About Me
+      {t("title")}
     </motion.h2>
   );
 }

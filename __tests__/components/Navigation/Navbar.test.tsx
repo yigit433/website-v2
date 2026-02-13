@@ -3,18 +3,6 @@ import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import Navbar from "@/components/Navigation/Navbar";
 
-vi.mock("next/navigation", () => ({
-  useRouter: () => ({
-    push: vi.fn(),
-    replace: vi.fn(),
-    prefetch: vi.fn(),
-    back: vi.fn(),
-    forward: vi.fn(),
-    refresh: vi.fn(),
-  }),
-  usePathname: () => "/",
-}));
-
 vi.mock("next-themes", () => ({
   useTheme: () => ({
     theme: "light",
@@ -28,12 +16,6 @@ vi.mock("next-themes", () => ({
 vi.mock("@/yigit433.config", () => ({
   default: {
     siteName: "yigit433",
-    routes: [
-      { name: "Home", to: "/" },
-      { name: "About me", to: "/about-me" },
-      { name: "Projects", to: "/projects" },
-      { name: "Repositories", to: "/repositories" },
-    ],
   },
 }));
 
@@ -43,12 +25,13 @@ describe("Navbar", () => {
     expect(screen.getByText("yigit433")).toBeInTheDocument();
   });
 
-  it("renders all route links", () => {
+  it("renders all route links via translation keys", () => {
     render(<Navbar />);
-    expect(screen.getByText("Home")).toBeInTheDocument();
-    expect(screen.getByText("About me")).toBeInTheDocument();
-    expect(screen.getByText("Projects")).toBeInTheDocument();
-    expect(screen.getByText("Repositories")).toBeInTheDocument();
+    // useTranslations mock returns the key as text
+    expect(screen.getAllByText("home").length).toBeGreaterThanOrEqual(1);
+    expect(screen.getAllByText("aboutMe").length).toBeGreaterThanOrEqual(1);
+    expect(screen.getAllByText("projects").length).toBeGreaterThanOrEqual(1);
+    expect(screen.getAllByText("repositories").length).toBeGreaterThanOrEqual(1);
   });
 
   it("renders toggle button for mobile", () => {
@@ -61,19 +44,14 @@ describe("Navbar", () => {
     const user = userEvent.setup();
     render(<Navbar />);
 
-    // The ToggleButton should be present - it's the button outside the nav items
-    // Initially mobile menu items are rendered once (desktop)
-    const homeLinks = screen.getAllByText("Home");
+    const homeLinks = screen.getAllByText("home");
     const initialCount = homeLinks.length;
 
-    // Find and click the toggle button (it contains Menu/X icon)
     const buttons = screen.getAllByRole("button");
-    // The toggle button is the last button (after nav items and theme toggle)
     const toggleButton = buttons[buttons.length - 1];
     await user.click(toggleButton);
 
-    // After opening, mobile menu should add duplicate route items
-    const homeLinksAfter = screen.getAllByText("Home");
+    const homeLinksAfter = screen.getAllByText("home");
     expect(homeLinksAfter.length).toBeGreaterThan(initialCount);
   });
 });

@@ -1,6 +1,6 @@
 import { describe, it, expect, vi } from "vitest";
 import { render, screen } from "@testing-library/react";
-import RepositoriesPage from "@/app/repositories/page";
+import RepositoriesPage from "@/app/[locale]/repositories/page";
 import useSWR from "swr";
 
 vi.mock("swr", () => ({
@@ -63,7 +63,7 @@ describe("RepositoriesPage", () => {
     } as ReturnType<typeof useSWR>);
 
     render(<RepositoriesPage />);
-    expect(screen.getByText("Loading repositories...")).toBeInTheDocument();
+    expect(screen.getByText("loading")).toBeInTheDocument();
   });
 
   it("shows error state", () => {
@@ -76,9 +76,7 @@ describe("RepositoriesPage", () => {
     } as ReturnType<typeof useSWR>);
 
     render(<RepositoriesPage />);
-    expect(
-      screen.getByText("Failed to load repositories.")
-    ).toBeInTheDocument();
+    expect(screen.getByText("error")).toBeInTheDocument();
   });
 
   it("renders repository cards on success", () => {
@@ -91,7 +89,7 @@ describe("RepositoriesPage", () => {
     } as ReturnType<typeof useSWR>);
 
     render(<RepositoriesPage />);
-    expect(screen.getByText("Repositories")).toBeInTheDocument();
+    expect(screen.getByText("title")).toBeInTheDocument();
     expect(screen.getByText("website-v2")).toBeInTheDocument();
     expect(screen.getByText("cool-project")).toBeInTheDocument();
   });
@@ -105,16 +103,6 @@ describe("RepositoriesPage", () => {
         html_url: "https://github.com/yigit433/bolt.new",
         description: "Excluded repo",
         language: "TypeScript",
-        stargazers_count: 0,
-        updated_at: "2024-01-01T00:00:00Z",
-        archived: false,
-      },
-      {
-        id: 6,
-        name: "yigit433",
-        html_url: "https://github.com/yigit433/yigit433",
-        description: "Profile repo",
-        language: null,
         stargazers_count: 0,
         updated_at: "2024-01-01T00:00:00Z",
         archived: false,
@@ -143,7 +131,7 @@ describe("RepositoriesPage", () => {
     } as ReturnType<typeof useSWR>);
 
     render(<RepositoriesPage />);
-    expect(screen.getByText("Portfolio")).toBeInTheDocument();
+    expect(screen.getByText("portfolio")).toBeInTheDocument();
   });
 
   it("marks old version repo with badge", () => {
@@ -156,7 +144,7 @@ describe("RepositoriesPage", () => {
     } as ReturnType<typeof useSWR>);
 
     render(<RepositoriesPage />);
-    expect(screen.getByText("OLD VERSION")).toBeInTheDocument();
+    expect(screen.getByText("oldVersion")).toBeInTheDocument();
   });
 
   it("marks archived repos with badge", () => {
@@ -169,7 +157,7 @@ describe("RepositoriesPage", () => {
     } as ReturnType<typeof useSWR>);
 
     render(<RepositoriesPage />);
-    expect(screen.getByText("ARCHIVED")).toBeInTheDocument();
+    expect(screen.getByText("archived")).toBeInTheDocument();
   });
 
   it("shows fallback for repos without description", () => {
@@ -193,7 +181,7 @@ describe("RepositoriesPage", () => {
     } as ReturnType<typeof useSWR>);
 
     render(<RepositoriesPage />);
-    expect(screen.getByText("No description provided.")).toBeInTheDocument();
-    expect(screen.getByText("Unknown")).toBeInTheDocument();
+    expect(screen.getByText("noDescription")).toBeInTheDocument();
+    expect(screen.getByText("unknown")).toBeInTheDocument();
   });
 });
