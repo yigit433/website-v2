@@ -32,7 +32,7 @@ const MobileMenu = ({ routes, currentPath, closeMenu, router }: Props) => (
         </li>
       ))}
       <li className="flex justify-center pt-2">
-        <LocaleSwitcher />
+        <LocaleSwitcher mobile />
       </li>
     </ul>
   </motion.div>
