@@ -14,7 +14,7 @@ const techStackItems = [
     { name: "Flutter", icon: "/icons/flutter.svg", key: "flutter" },
     { name: "Supabase", icon: "/icons/supabase.svg", key: "supabase" },
     { name: "Docker", icon: "/icons/docker.svg", key: "docker" },
-    { name: "Prisma", icon: "/icons/prisma.svg", key: "prisma" },
+    { name: "Drizzle", icon: "/icons/drizzle.svg", key: "drizzle" },
     { name: "MongoDB", icon: "/icons/mongodb.svg", key: "mongodb" },
     { name: "PostgreSQL", icon: "/icons/postgresql.svg", key: "postgresql" },
     { name: "TensorFlow", icon: "/icons/tensorflow.svg", key: "tensorflow" },
