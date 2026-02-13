@@ -6,6 +6,7 @@ import { routing } from "@/i18n/routing";
 import Navbar from "@/components/Navigation/Navbar";
 import PageTransition from "@/components/PageTransition";
 import CommandPaletteProvider from "@/components/CommandPalette/CommandPaletteProvider";
+import Footer from "@/components/Footer";
 
 type Props = {
   children: React.ReactNode;
@@ -36,6 +37,7 @@ export default async function LocaleLayout({ children, params }: Props) {
             <main className="pt-20">
               <PageTransition>{children}</PageTransition>
             </main>
+            <Footer />
           </ThemeProvider>
         </NextIntlClientProvider>
       </body>

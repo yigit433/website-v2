@@ -101,6 +101,10 @@
     "navigate": "Gezin",
     "select": "Seç"
   },
+  "Footer": {
+    "cmdkHint": "Komut paletini aç",
+    "rights": "Tüm hakları saklıdır."
+  },
   "ThemeToggle": {
     "label": "Tema değiştir"
   },

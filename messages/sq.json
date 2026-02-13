@@ -101,6 +101,10 @@
     "navigate": "Navigo",
     "select": "Zgjidh"
   },
+  "Footer": {
+    "cmdkHint": "Hap paletën e komandave",
+    "rights": "Të gjitha të drejtat e rezervuara."
+  },
   "ThemeToggle": {
     "label": "Ndrysho temën"
   },

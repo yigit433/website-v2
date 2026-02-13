@@ -101,6 +101,10 @@
     "navigate": "Navigieren",
     "select": "Auswählen"
   },
+  "Footer": {
+    "cmdkHint": "Befehlspalette öffnen",
+    "rights": "Alle Rechte vorbehalten."
+  },
   "ThemeToggle": {
     "label": "Thema wechseln"
   },

@@ -101,6 +101,10 @@
     "navigate": "Navigate",
     "select": "Select"
   },
+  "Footer": {
+    "cmdkHint": "Open command palette",
+    "rights": "All rights reserved."
+  },
   "ThemeToggle": {
     "label": "Toggle theme"
   },
